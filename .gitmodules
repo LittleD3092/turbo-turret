@@ -1,0 +1,3 @@
+[submodule "dep/darkflow"]
+	path = dep/darkflow
+	url = https://github.com/thtrieu/darkflow.git
