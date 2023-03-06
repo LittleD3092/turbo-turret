@@ -7,7 +7,7 @@ Project repo for mechanical practice course. A turret maybe?
 ```python
 ├───cad # 3D cad
 ├───dep # Dependencies
-│   └───darkflow # For object recognizing
 ├───doc # Documents
-└───pic # Pictures
+├── pic # Pictures
+└── res # Resources
 ```

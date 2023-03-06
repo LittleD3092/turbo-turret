@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['archery-targets']
+
+roboflow:
+  workspace: project-xrvnb
+  project: archery-targets
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/project-xrvnb/archery-targets/dataset/1
