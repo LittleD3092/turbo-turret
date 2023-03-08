@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['archery-targets']
+
+roboflow:
+  workspace: mechanical-practice-lab
+  project: archery-targets
+  version: 2
+  license: MIT
+  url: https://universe.roboflow.com/mechanical-practice-lab/archery-targets/dataset/2

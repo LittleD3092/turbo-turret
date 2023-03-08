@@ -15,7 +15,7 @@ def findProjectRoot():
 PROJECT_NAME = "target-recognize"
 PROJECT_ROOT = findProjectRoot()
 os.chdir(PROJECT_ROOT)
-TRAINING_DATA_PATH = PROJECT_ROOT + "/res/archery-targets.v1i.yolov8/data.yaml"
+TRAINING_DATA_PATH = PROJECT_ROOT + "/res/archery-targets-dataset/data.yaml"
 
 model = YOLO("yolov8n.yaml") # build a new model from scratch
 model.train(data = TRAINING_DATA_PATH, epochs = 100, imgsz = 640)
