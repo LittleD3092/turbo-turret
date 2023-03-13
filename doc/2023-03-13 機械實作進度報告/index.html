@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## 機械實作進度報告
+							第一組
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## 謝祖恩
+
+							---
+
+							### 3D列印軸承
+
+							<img src="attachments/軸承.jpg" width="500">
+
+							---
+
+							### 軸承動作
+
+							<img src="attachments/軸承動作.gif" width="300">
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## 吳典謀
+
+							---
+
+							### 訓練模型
+
+							第一次訓練的模型無法適應較弱光線
+
+							---
+
+							這次拍攝多67張照片並加入訓練，包含以下特徵：
+
+							1. 部份照片含多個目標
+							2. 斜視目標
+							3. 目標部份遮擋
+							4. 光線較暗
+
+							---
+
+							![roboflow images](attachments/roboflow-images.png))
+							
+							---
+
+							### demo
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## 陳柏文
+
+							---
+
+							### 購買材料
+
+							---
+
+							#### 氣嘴
+
+							<img src="attachments/氣嘴.png" width="500">
+
+							---
+
+							#### 氣瓶
+
+							<img src="attachments/氣瓶.png" width="500">
+
+							---
+
+							#### 氣管
+
+							<img src="attachments/氣管.png" width="500">
+
+							---
+
+							#### 電動閥門
+
+							<img src="attachments/電動閥門.png" width="500">
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## 王竣毅
+
+							---
+
+							### 購買材料
+
+							---
+
+							#### 履帶
+
+							<img src="attachments/履帶.jpg" width="500">
+						</textarea>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

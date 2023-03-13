@@ -15,7 +15,7 @@ def findProjectRoot():
 PROJECT_NAME = "target-recognize"
 PROJECT_ROOT = findProjectRoot()
 os.chdir(PROJECT_ROOT)
-MODEL_PATH = PROJECT_ROOT + "/runs/detect/train2/weights/best.pt"
+MODEL_PATH = PROJECT_ROOT + "/runs/detect/train/weights/best.pt"
 
 # Load model
 model = YOLO(MODEL_PATH)
