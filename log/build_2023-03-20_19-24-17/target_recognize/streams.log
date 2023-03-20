@@ -1,0 +1,21 @@
+[1.820s] Invoking command in '/home/littled3092/Documents/turbo-turret/src/target_recognize': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/target_recognize/prefix_override:/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/target_recognize build --build-base /home/littled3092/Documents/turbo-turret/build/target_recognize/build install --record /home/littled3092/Documents/turbo-turret/build/target_recognize/install.log --single-version-externally-managed
+[2.243s] running egg_info
+[2.244s] writing ../../build/target_recognize/target_recognize.egg-info/PKG-INFO
+[2.245s] writing dependency_links to ../../build/target_recognize/target_recognize.egg-info/dependency_links.txt
+[2.245s] writing entry points to ../../build/target_recognize/target_recognize.egg-info/entry_points.txt
+[2.245s] writing requirements to ../../build/target_recognize/target_recognize.egg-info/requires.txt
+[2.245s] writing top-level names to ../../build/target_recognize/target_recognize.egg-info/top_level.txt
+[2.249s] reading manifest file '../../build/target_recognize/target_recognize.egg-info/SOURCES.txt'
+[2.251s] writing manifest file '../../build/target_recognize/target_recognize.egg-info/SOURCES.txt'
+[2.251s] running build
+[2.252s] running build_py
+[2.252s] running install
+[2.252s] running install_lib
+[2.254s] running install_data
+[2.255s] running install_egg_info
+[2.258s] removing '/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages/target_recognize-0.0.0-py3.10.egg-info' (and everything under it)
+[2.258s] Copying ../../build/target_recognize/target_recognize.egg-info to /home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages/target_recognize-0.0.0-py3.10.egg-info
+[2.260s] running install_scripts
+[2.293s] Installing target_recognize script to /home/littled3092/Documents/turbo-turret/install/target_recognize/lib/target_recognize
+[2.293s] writing list of installed files to '/home/littled3092/Documents/turbo-turret/build/target_recognize/install.log'
+[2.367s] Invoked command in '/home/littled3092/Documents/turbo-turret/src/target_recognize' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/target_recognize/prefix_override:/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/target_recognize build --build-base /home/littled3092/Documents/turbo-turret/build/target_recognize/build install --record /home/littled3092/Documents/turbo-turret/build/target_recognize/install.log --single-version-externally-managed

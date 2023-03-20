@@ -1,0 +1,3 @@
+[console_scripts]
+main_control = main_control.main_control:main
+

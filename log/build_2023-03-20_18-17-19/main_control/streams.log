@@ -1,0 +1,21 @@
+[1.367s] Invoking command in '/home/littled3092/Documents/turbo-turret/src/main_control': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/main_control/prefix_override:/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_control build --build-base /home/littled3092/Documents/turbo-turret/build/main_control/build install --record /home/littled3092/Documents/turbo-turret/build/main_control/install.log --single-version-externally-managed
+[1.781s] running egg_info
+[1.782s] writing ../../build/main_control/main_control.egg-info/PKG-INFO
+[1.782s] writing dependency_links to ../../build/main_control/main_control.egg-info/dependency_links.txt
+[1.782s] writing entry points to ../../build/main_control/main_control.egg-info/entry_points.txt
+[1.783s] writing requirements to ../../build/main_control/main_control.egg-info/requires.txt
+[1.783s] writing top-level names to ../../build/main_control/main_control.egg-info/top_level.txt
+[1.787s] reading manifest file '../../build/main_control/main_control.egg-info/SOURCES.txt'
+[1.790s] writing manifest file '../../build/main_control/main_control.egg-info/SOURCES.txt'
+[1.790s] running build
+[1.790s] running build_py
+[1.791s] running install
+[1.791s] running install_lib
+[1.794s] running install_data
+[1.795s] running install_egg_info
+[1.798s] removing '/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages/main_control-0.0.0-py3.10.egg-info' (and everything under it)
+[1.799s] Copying ../../build/main_control/main_control.egg-info to /home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages/main_control-0.0.0-py3.10.egg-info
+[1.800s] running install_scripts
+[1.835s] Installing main_control script to /home/littled3092/Documents/turbo-turret/install/main_control/lib/main_control
+[1.837s] writing list of installed files to '/home/littled3092/Documents/turbo-turret/build/main_control/install.log'
+[1.920s] Invoked command in '/home/littled3092/Documents/turbo-turret/src/main_control' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/main_control/prefix_override:/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_control build --build-base /home/littled3092/Documents/turbo-turret/build/main_control/build install --record /home/littled3092/Documents/turbo-turret/build/main_control/install.log --single-version-externally-managed

@@ -1,0 +1,63 @@
+[0.053s] Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input': CMAKE_PREFIX_PATH=/home/littled3092/Documents/turbo-turret/install/controller_input:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake /home/littled3092/Documents/turbo-turret/src/controller_input -DCMAKE_INSTALL_PREFIX=/home/littled3092/Documents/turbo-turret/install/controller_input
+[0.478s] -- The C compiler identification is GNU 11.3.0
+[0.479s] -- The CXX compiler identification is GNU 11.3.0
+[0.479s] -- Detecting C compiler ABI info
+[0.479s] -- Detecting C compiler ABI info - done
+[0.479s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.479s] -- Detecting C compile features
+[0.480s] -- Detecting C compile features - done
+[0.480s] -- Detecting CXX compiler ABI info
+[0.480s] -- Detecting CXX compiler ABI info - done
+[0.480s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.480s] -- Detecting CXX compile features
+[0.480s] -- Detecting CXX compile features - done
+[0.481s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.736s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.887s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.892s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.903s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.979s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.372s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[1.372s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[1.373s]   controller_input --arguments-file
+[1.373s] -- Configuring incomplete, errors occurred!
+[1.373s] See also "/home/littled3092/Documents/turbo-turret/build/controller_input/CMakeFiles/CMakeOutput.log".
+[1.373s]   /home/littled3092/Documents/turbo-turret/build/controller_input/rosidl_adapter__arguments__controller_input.json
+[1.374s]   --output-dir
+[1.374s]   /home/littled3092/Documents/turbo-turret/build/controller_input/rosidl_adapter/controller_input
+[1.374s]   --output-file
+[1.374s]   /home/littled3092/Documents/turbo-turret/build/controller_input/rosidl_adapter/controller_input.idls)
+[1.374s]   returned error code 1:
+[1.375s] 
+[1.375s]   Traceback (most recent call last):
+[1.375s] 
+[1.375s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1.375s]       return _run_code(code, main_globals, None,
+[1.375s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[1.375s]       exec(code, run_globals)
+[1.376s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.376s]       sys.exit(main())
+[1.376s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[1.376s]       abs_idl_file = convert_to_idl(
+[1.376s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+[1.376s]       return convert_srv_to_idl(
+[1.377s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+[1.377s]       srv = parse_service_string(package_name, input_file.stem, content)
+[1.377s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 859, in parse_service_string
+[1.377s]       request_message = parse_message_string(
+[1.377s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 544, in parse_message_string
+[1.377s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[1.377s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 388, in __init__
+[1.378s]       self.base_type = BaseType(
+[1.378s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 205, in __init__
+[1.378s]       raise InvalidResourceName(
+[1.378s] 
+[1.378s]   rosidl_adapter.parser.InvalidResourceName: 'controller_Request' is an
+[1.379s]   invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[1.379s] 
+[1.379s] Call Stack (most recent call first):
+[1.379s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.379s]   CMakeLists.txt:15 (rosidl_generate_interfaces)
+[1.379s] 
+[1.379s] [0m
+[1.389s] Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input' returned '1': CMAKE_PREFIX_PATH=/home/littled3092/Documents/turbo-turret/install/controller_input:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake /home/littled3092/Documents/turbo-turret/src/controller_input -DCMAKE_INSTALL_PREFIX=/home/littled3092/Documents/turbo-turret/install/controller_input

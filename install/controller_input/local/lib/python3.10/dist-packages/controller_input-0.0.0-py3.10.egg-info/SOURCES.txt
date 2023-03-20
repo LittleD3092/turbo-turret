@@ -1,0 +1,6 @@
+setup.py
+controller_input/__init__.py
+controller_input.egg-info/PKG-INFO
+controller_input.egg-info/SOURCES.txt
+controller_input.egg-info/dependency_links.txt
+controller_input.egg-info/top_level.txt

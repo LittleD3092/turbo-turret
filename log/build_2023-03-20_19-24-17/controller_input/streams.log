@@ -1,0 +1,21 @@
+[1.799s] Invoking command in '/home/littled3092/Documents/turbo-turret/src/controller_input': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/controller_input/prefix_override:/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller_input build --build-base /home/littled3092/Documents/turbo-turret/build/controller_input/build install --record /home/littled3092/Documents/turbo-turret/build/controller_input/install.log --single-version-externally-managed
+[2.263s] running egg_info
+[2.264s] writing ../../build/controller_input/controller_input.egg-info/PKG-INFO
+[2.264s] writing dependency_links to ../../build/controller_input/controller_input.egg-info/dependency_links.txt
+[2.264s] writing entry points to ../../build/controller_input/controller_input.egg-info/entry_points.txt
+[2.264s] writing requirements to ../../build/controller_input/controller_input.egg-info/requires.txt
+[2.264s] writing top-level names to ../../build/controller_input/controller_input.egg-info/top_level.txt
+[2.268s] reading manifest file '../../build/controller_input/controller_input.egg-info/SOURCES.txt'
+[2.270s] writing manifest file '../../build/controller_input/controller_input.egg-info/SOURCES.txt'
+[2.270s] running build
+[2.270s] running build_py
+[2.270s] running install
+[2.271s] running install_lib
+[2.273s] running install_data
+[2.274s] running install_egg_info
+[2.277s] removing '/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input-0.0.0-py3.10.egg-info' (and everything under it)
+[2.278s] Copying ../../build/controller_input/controller_input.egg-info to /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input-0.0.0-py3.10.egg-info
+[2.279s] running install_scripts
+[2.320s] Installing controller_input script to /home/littled3092/Documents/turbo-turret/install/controller_input/lib/controller_input
+[2.321s] writing list of installed files to '/home/littled3092/Documents/turbo-turret/build/controller_input/install.log'
+[2.435s] Invoked command in '/home/littled3092/Documents/turbo-turret/src/controller_input' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/controller_input/prefix_override:/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller_input build --build-base /home/littled3092/Documents/turbo-turret/build/controller_input/build install --record /home/littled3092/Documents/turbo-turret/build/controller_input/install.log --single-version-externally-managed

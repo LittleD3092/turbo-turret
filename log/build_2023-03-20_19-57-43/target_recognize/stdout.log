@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/target_recognize/target_recognize.egg-info/PKG-INFO
+writing dependency_links to ../../build/target_recognize/target_recognize.egg-info/dependency_links.txt
+writing entry points to ../../build/target_recognize/target_recognize.egg-info/entry_points.txt
+writing requirements to ../../build/target_recognize/target_recognize.egg-info/requires.txt
+writing top-level names to ../../build/target_recognize/target_recognize.egg-info/top_level.txt
+reading manifest file '../../build/target_recognize/target_recognize.egg-info/SOURCES.txt'
+writing manifest file '../../build/target_recognize/target_recognize.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages/target_recognize-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/target_recognize/target_recognize.egg-info to /home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages/target_recognize-0.0.0-py3.10.egg-info
+running install_scripts
+Installing target_recognize script to /home/littled3092/Documents/turbo-turret/install/target_recognize/lib/target_recognize
+writing list of installed files to '/home/littled3092/Documents/turbo-turret/build/target_recognize/install.log'

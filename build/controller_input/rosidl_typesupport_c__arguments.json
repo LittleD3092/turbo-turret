@@ -1,0 +1,17 @@
+{
+  "package_name": "controller_input",
+  "output_dir": "/home/littled3092/Documents/turbo-turret/build/controller_input/rosidl_typesupport_c/controller_input",
+  "template_dir": "/opt/ros/humble/share/rosidl_typesupport_c/resource",
+  "idl_tuples": [
+    "/home/littled3092/Documents/turbo-turret/build/controller_input/rosidl_adapter/controller_input:srv/Controller.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_c/__init__.py",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/action__type_support.c.em",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em",
+    "/home/littled3092/Documents/turbo-turret/build/controller_input/rosidl_adapter/controller_input/srv/Controller.idl"
+  ]
+}

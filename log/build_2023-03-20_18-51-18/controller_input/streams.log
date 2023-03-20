@@ -1,0 +1,37 @@
+[1.889s] Invoking command in '/home/littled3092/Documents/turbo-turret/src/controller_input': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/controller_input/prefix_override:/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller_input build --build-base /home/littled3092/Documents/turbo-turret/build/controller_input/build install --record /home/littled3092/Documents/turbo-turret/build/controller_input/install.log --single-version-externally-managed
+[2.355s] running egg_info
+[2.356s] creating ../../build/controller_input/controller_input.egg-info
+[2.357s] writing ../../build/controller_input/controller_input.egg-info/PKG-INFO
+[2.357s] writing dependency_links to ../../build/controller_input/controller_input.egg-info/dependency_links.txt
+[2.357s] writing entry points to ../../build/controller_input/controller_input.egg-info/entry_points.txt
+[2.357s] writing requirements to ../../build/controller_input/controller_input.egg-info/requires.txt
+[2.357s] writing top-level names to ../../build/controller_input/controller_input.egg-info/top_level.txt
+[2.358s] writing manifest file '../../build/controller_input/controller_input.egg-info/SOURCES.txt'
+[2.362s] reading manifest file '../../build/controller_input/controller_input.egg-info/SOURCES.txt'
+[2.363s] writing manifest file '../../build/controller_input/controller_input.egg-info/SOURCES.txt'
+[2.364s] running build
+[2.366s] running build_py
+[2.367s] creating /home/littled3092/Documents/turbo-turret/build/controller_input/build
+[2.367s] creating /home/littled3092/Documents/turbo-turret/build/controller_input/build/lib
+[2.367s] creating /home/littled3092/Documents/turbo-turret/build/controller_input/build/lib/controller_input
+[2.367s] copying controller_input/__init__.py -> /home/littled3092/Documents/turbo-turret/build/controller_input/build/lib/controller_input
+[2.368s] copying controller_input/controller_input.py -> /home/littled3092/Documents/turbo-turret/build/controller_input/build/lib/controller_input
+[2.368s] running install
+[2.368s] running install_lib
+[2.369s] creating /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input
+[2.369s] copying /home/littled3092/Documents/turbo-turret/build/controller_input/build/lib/controller_input/__init__.py -> /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input
+[2.369s] copying /home/littled3092/Documents/turbo-turret/build/controller_input/build/lib/controller_input/controller_input.py -> /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input
+[2.370s] byte-compiling /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input/__init__.py to __init__.cpython-310.pyc
+[2.370s] byte-compiling /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input/controller_input.py to controller_input.cpython-310.pyc
+[2.370s] running install_data
+[2.372s] creating /home/littled3092/Documents/turbo-turret/install/controller_input/share/ament_index
+[2.372s] creating /home/littled3092/Documents/turbo-turret/install/controller_input/share/ament_index/resource_index
+[2.372s] creating /home/littled3092/Documents/turbo-turret/install/controller_input/share/ament_index/resource_index/packages
+[2.373s] copying resource/controller_input -> /home/littled3092/Documents/turbo-turret/install/controller_input/share/ament_index/resource_index/packages
+[2.373s] copying package.xml -> /home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input
+[2.373s] running install_egg_info
+[2.376s] Copying ../../build/controller_input/controller_input.egg-info to /home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages/controller_input-0.0.0-py3.10.egg-info
+[2.378s] running install_scripts
+[2.413s] Installing controller_input script to /home/littled3092/Documents/turbo-turret/install/controller_input/lib/controller_input
+[2.414s] writing list of installed files to '/home/littled3092/Documents/turbo-turret/build/controller_input/install.log'
+[2.534s] Invoked command in '/home/littled3092/Documents/turbo-turret/src/controller_input' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/controller_input/prefix_override:/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller_input build --build-base /home/littled3092/Documents/turbo-turret/build/controller_input/build install --record /home/littled3092/Documents/turbo-turret/build/controller_input/install.log --single-version-externally-managed
