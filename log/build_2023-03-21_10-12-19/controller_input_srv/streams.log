@@ -1,0 +1,231 @@
+[0.473s] Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/littled3092/Documents/turbo-turret/src/controller_input_srv -DCMAKE_INSTALL_PREFIX=/home/littled3092/Documents/turbo-turret/install/controller_input_srv
+[0.849s] -- The C compiler identification is GNU 11.3.0
+[0.850s] -- The CXX compiler identification is GNU 11.3.0
+[0.850s] -- Detecting C compiler ABI info
+[0.851s] -- Detecting C compiler ABI info - done
+[0.851s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.851s] -- Detecting C compile features
+[0.852s] -- Detecting C compile features - done
+[0.852s] -- Detecting CXX compiler ABI info
+[0.853s] -- Detecting CXX compiler ABI info - done
+[0.853s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.853s] -- Detecting CXX compile features
+[0.853s] -- Detecting CXX compile features - done
+[0.853s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.083s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[1.226s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.231s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.239s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.313s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.837s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.231s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.725s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.794s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") 
+[2.796s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.868s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") 
+[2.869s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.869s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.869s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.932s] -- Found PythonExtra: .so  
+[3.007s] -- Found ament_lint_auto: 0.12.5 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.043s] -- Added test 'lint_cmake' to check CMake code style
+[3.046s] -- Added test 'xmllint' to check XML markup files
+[3.054s] -- Configuring done
+[3.100s] -- Generating done
+[3.103s] -- Build files have been written to: /home/littled3092/Documents/turbo-turret/build/controller_input_srv
+[3.110s] Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/littled3092/Documents/turbo-turret/src/controller_input_srv -DCMAKE_INSTALL_PREFIX=/home/littled3092/Documents/turbo-turret/install/controller_input_srv
+[3.113s] Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/littled3092/Documents/turbo-turret/build/controller_input_srv -- -j8 -l8
+[3.171s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.184s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.194s] [  6%] Built target ament_cmake_python_copy_controller_input_srv
+[3.620s] [  6%] Built target controller_input_srv__cpp
+[3.638s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.643s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.657s] [ 16%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.701s] running egg_info
+[3.703s] creating controller_input_srv.egg-info
+[3.703s] writing controller_input_srv.egg-info/PKG-INFO
+[3.704s] writing dependency_links to controller_input_srv.egg-info/dependency_links.txt
+[3.704s] writing top-level names to controller_input_srv.egg-info/top_level.txt
+[3.704s] writing manifest file 'controller_input_srv.egg-info/SOURCES.txt'
+[3.713s] reading manifest file 'controller_input_srv.egg-info/SOURCES.txt'
+[3.713s] writing manifest file 'controller_input_srv.egg-info/SOURCES.txt'
+[3.789s] [ 16%] Built target ament_cmake_python_build_controller_input_srv_egg
+[3.818s] [ 19%] [32mBuilding C object CMakeFiles/controller_input_srv__rosidl_generator_c.dir/rosidl_generator_c/controller_input_srv/srv/detail/controller__functions.c.o[0m
+[3.939s] [ 22%] [32m[1mLinking C shared library libcontroller_input_srv__rosidl_generator_c.so[0m
+[4.012s] [ 22%] Built target controller_input_srv__rosidl_generator_c
+[4.030s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.040s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.040s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.229s] [ 35%] [32mBuilding CXX object CMakeFiles/controller_input_srv__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_input_srv/srv/controller__type_support.cpp.o[0m
+[4.274s] [ 41%] [32mBuilding CXX object CMakeFiles/controller_input_srv__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_input_srv/srv/detail/controller__type_support.cpp.o[0m
+[4.276s] [ 41%] [32mBuilding CXX object CMakeFiles/controller_input_srv__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_input_srv/srv/detail/dds_fastrtps/controller__type_support.cpp.o[0m
+[4.656s] [ 45%] [32mBuilding CXX object CMakeFiles/controller_input_srv__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_input_srv/srv/controller__type_support.cpp.o[0m
+[4.678s] [ 48%] [32mBuilding C object CMakeFiles/controller_input_srv__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_input_srv/srv/detail/controller__type_support.c.o[0m
+[4.727s] [ 51%] [32m[1mLinking CXX shared library libcontroller_input_srv__rosidl_typesupport_c.so[0m
+[4.741s] [ 54%] [32mBuilding CXX object CMakeFiles/controller_input_srv__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_input_srv/srv/detail/controller__type_support_c.cpp.o[0m
+[4.769s] [ 58%] [32m[1mLinking C shared library libcontroller_input_srv__rosidl_typesupport_introspection_c.so[0m
+[4.819s] [ 58%] Built target controller_input_srv__rosidl_typesupport_c
+[4.836s] [ 61%] [32m[1mLinking CXX shared library libcontroller_input_srv__rosidl_typesupport_cpp.so[0m
+[4.836s] [ 61%] Built target controller_input_srv__rosidl_typesupport_introspection_c
+[4.923s] [ 61%] Built target controller_input_srv__rosidl_typesupport_cpp
+[5.076s] [ 64%] [32m[1mLinking CXX shared library libcontroller_input_srv__rosidl_typesupport_introspection_cpp.so[0m
+[5.154s] [ 67%] [32m[1mLinking CXX shared library libcontroller_input_srv__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.186s] [ 67%] Built target controller_input_srv__rosidl_typesupport_introspection_cpp
+[5.303s] [ 67%] Built target controller_input_srv__rosidl_typesupport_fastrtps_cpp
+[5.407s] [ 70%] [32m[1mLinking CXX shared library libcontroller_input_srv__rosidl_typesupport_fastrtps_c.so[0m
+[5.542s] [ 70%] Built target controller_input_srv__rosidl_typesupport_fastrtps_c
+[5.576s] [ 70%] Built target controller_input_srv
+[5.606s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.239s] [ 74%] Built target controller_input_srv__py
+[6.271s] [ 77%] [32mBuilding C object CMakeFiles/controller_input_srv__rosidl_generator_py.dir/rosidl_generator_py/controller_input_srv/srv/_controller_s.c.o[0m
+[6.446s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/controller_input_srv/libcontroller_input_srv__rosidl_generator_py.so[0m
+[6.508s] [ 80%] Built target controller_input_srv__rosidl_generator_py
+[6.541s] [ 83%] [32mBuilding C object CMakeFiles/controller_input_srv__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/controller_input_srv/_controller_input_srv_s.ep.rosidl_typesupport_c.c.o[0m
+[6.542s] [ 87%] [32mBuilding C object CMakeFiles/controller_input_srv__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/controller_input_srv/_controller_input_srv_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[6.544s] [ 90%] [32mBuilding C object CMakeFiles/controller_input_srv__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/controller_input_srv/_controller_input_srv_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.702s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/controller_input_srv/controller_input_srv_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.711s] [100%] [32m[1mLinking C shared library rosidl_generator_py/controller_input_srv/controller_input_srv_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.714s] [100%] [32m[1mLinking C shared library rosidl_generator_py/controller_input_srv/controller_input_srv_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.761s] [100%] Built target controller_input_srv__rosidl_typesupport_introspection_c__pyext
+[6.769s] [100%] Built target controller_input_srv__rosidl_typesupport_c__pyext
+[6.788s] [100%] Built target controller_input_srv__rosidl_typesupport_fastrtps_c__pyext
+[6.804s] Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/littled3092/Documents/turbo-turret/build/controller_input_srv -- -j8 -l8
+[6.903s] Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/littled3092/Documents/turbo-turret/build/controller_input_srv
+[6.915s] -- Install configuration: ""
+[6.915s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/ament_index/resource_index/rosidl_interfaces/controller_input_srv
+[6.916s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv
+[6.916s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv
+[6.916s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/controller.h
+[6.916s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail
+[6.916s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__functions.h
+[6.916s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__struct.h
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__type_support.h
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__functions.c
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg/rosidl_generator_c__visibility_control.h
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/library_path.sh
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/library_path.dsv
+[6.917s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_generator_c.so
+[6.918s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_generator_c.so" to ""
+[6.918s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv
+[6.918s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv
+[6.919s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail
+[6.919s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__rosidl_typesupport_fastrtps_c.h
+[6.919s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg
+[6.919s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.919s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_fastrtps_c.so
+[6.919s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_fastrtps_c.so" to ""
+[6.920s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv
+[6.920s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv
+[6.920s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail
+[6.920s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__type_support.c
+[6.920s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__rosidl_typesupport_introspection_c.h
+[6.920s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg
+[6.920s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.920s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_introspection_c.so
+[6.921s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_introspection_c.so" to ""
+[6.921s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_c.so
+[6.922s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_c.so" to ""
+[6.922s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv
+[6.922s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv
+[6.923s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/controller.hpp
+[6.923s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail
+[6.923s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__builder.hpp
+[6.923s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__traits.hpp
+[6.923s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__struct.hpp
+[6.924s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv
+[6.924s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv
+[6.924s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail
+[6.924s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__rosidl_typesupport_fastrtps_cpp.hpp
+[6.925s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/dds_fastrtps
+[6.925s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg
+[6.925s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.925s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_fastrtps_cpp.so
+[6.925s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.925s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv
+[6.926s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv
+[6.926s] -- Up-to-date: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail
+[6.926s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__type_support.cpp
+[6.926s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/controller_input_srv/controller_input_srv/srv/detail/controller__rosidl_typesupport_introspection_cpp.hpp
+[6.927s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_introspection_cpp.so
+[6.927s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_introspection_cpp.so" to ""
+[6.927s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_cpp.so
+[6.927s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_typesupport_cpp.so" to ""
+[6.928s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/pythonpath.sh
+[6.928s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/pythonpath.dsv
+[6.928s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv-0.0.0-py3.10.egg-info
+[6.928s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv-0.0.0-py3.10.egg-info/top_level.txt
+[6.929s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv-0.0.0-py3.10.egg-info/PKG-INFO
+[6.929s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv-0.0.0-py3.10.egg-info/dependency_links.txt
+[6.929s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv-0.0.0-py3.10.egg-info/SOURCES.txt
+[6.929s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv
+[6.929s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/_controller_input_srv_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.930s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/_controller_input_srv_s.ep.rosidl_typesupport_introspection_c.c
+[6.930s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/__init__.py
+[6.930s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv
+[6.930s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv/_controller_s.c
+[6.931s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv/__init__.py
+[6.931s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv/_controller.py
+[6.931s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/_controller_input_srv_s.ep.rosidl_typesupport_c.c
+[6.931s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.931s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.931s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.932s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/libcontroller_input_srv__rosidl_generator_py.so
+[6.990s] Listing '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv'...
+[6.990s] Compiling '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/__init__.py'...
+[6.990s] Listing '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv'...
+[6.990s] Compiling '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv/__init__.py'...
+[6.990s] Compiling '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/srv/_controller.py'...
+[6.997s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.997s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.998s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.998s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.999s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.999s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages/controller_input_srv/controller_input_srv_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.999s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_generator_py.so
+[7.000s] -- Set runtime path of "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/libcontroller_input_srv__rosidl_generator_py.so" to ""
+[7.000s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/srv/Controller.idl
+[7.000s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/srv/Controller.srv
+[7.000s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/srv/Controller_Request.msg
+[7.001s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/srv/Controller_Response.msg
+[7.001s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/ament_index/resource_index/package_run_dependencies/controller_input_srv
+[7.001s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/ament_index/resource_index/parent_prefix_path/controller_input_srv
+[7.001s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/ament_prefix_path.sh
+[7.002s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/ament_prefix_path.dsv
+[7.002s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/path.sh
+[7.002s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/environment/path.dsv
+[7.002s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/local_setup.bash
+[7.002s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/local_setup.sh
+[7.003s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/local_setup.zsh
+[7.003s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/local_setup.dsv
+[7.003s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.dsv
+[7.003s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/ament_index/resource_index/packages/controller_input_srv
+[7.004s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_generator_cExport.cmake
+[7.004s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_generator_cExport-noconfig.cmake
+[7.004s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_typesupport_fastrtps_cExport.cmake
+[7.004s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.004s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_introspection_cExport.cmake
+[7.005s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.005s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_cExport.cmake
+[7.005s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_cExport-noconfig.cmake
+[7.005s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_generator_cppExport.cmake
+[7.006s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.006s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.006s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_introspection_cppExport.cmake
+[7.007s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.007s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_cppExport.cmake
+[7.007s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srv__rosidl_typesupport_cppExport-noconfig.cmake
+[7.008s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_generator_pyExport.cmake
+[7.008s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/export_controller_input_srv__rosidl_generator_pyExport-noconfig.cmake
+[7.008s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/rosidl_cmake-extras.cmake
+[7.009s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.009s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/ament_cmake_export_libraries-extras.cmake
+[7.009s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/ament_cmake_export_targets-extras.cmake
+[7.010s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.010s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.010s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.011s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srvConfig.cmake
+[7.011s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/cmake/controller_input_srvConfig-version.cmake
+[7.011s] -- Installing: /home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.xml
+[7.018s] Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/littled3092/Documents/turbo-turret/build/controller_input_srv

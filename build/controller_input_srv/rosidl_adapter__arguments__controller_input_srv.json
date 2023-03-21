@@ -1,0 +1,6 @@
+{
+  "package_name": "controller_input_srv",
+  "non_idl_tuples": [
+    "/home/littled3092/Documents/turbo-turret/src/controller_input_srv:srv/Controller.srv"
+  ]
+}

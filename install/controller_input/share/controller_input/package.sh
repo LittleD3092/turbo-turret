@@ -81,7 +81,7 @@ _colcon_package_sh_source_script() {
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/controller_input/hook/cmake_prefix_path.sh"
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/controller_input/hook/ld_library_path_lib.sh"
 _colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/controller_input/hook/pythonpath.sh"
-_colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/controller_input/local_setup.sh"
+_colcon_package_sh_source_script "$COLCON_CURRENT_PREFIX/share/controller_input/hook/ament_prefix_path.sh"
 
 unset _colcon_package_sh_source_script
 unset COLCON_CURRENT_PREFIX

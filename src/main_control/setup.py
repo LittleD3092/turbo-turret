@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'main_control = main_control.main_control:main'
+            'main_control = main_control.main_control:main',
+            'client = main_control.client_member_function:main',
         ],
     },
 )

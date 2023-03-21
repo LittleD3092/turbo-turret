@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from controller_input_srv/srv/Controller.srv
+// generated code does not contain a copyright notice
+
+
+module controller_input_srv {
+  module srv {
+    struct Controller_Request {
+      string title;
+    };
+    struct Controller_Response {
+      string title;
+    };
+  };
+};
