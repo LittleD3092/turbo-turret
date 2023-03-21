@@ -8,7 +8,7 @@ class ControllerInputClient(Node):
     def __init__(self):
         super().__init__('main_control')
         self.cli = self.create_client(Controller, 'controller_input')
-        while not self.cli.wait_for_service(timeout_sec=1.0):
+        while not self.cli.wait_for_service(timeout_sec=5.0):
             self.get_logger().info('service not available, waiting again...')
         self.req = Controller.Request()
 

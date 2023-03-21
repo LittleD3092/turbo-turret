@@ -34,3 +34,4 @@
 # ROS generated files
 build/
 install/
+log/
