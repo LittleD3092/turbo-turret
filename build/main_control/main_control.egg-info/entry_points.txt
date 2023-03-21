@@ -1,4 +1,0 @@
-[console_scripts]
-client = main_control.client_member_function:main
-main_control = main_control.main_control:main
-

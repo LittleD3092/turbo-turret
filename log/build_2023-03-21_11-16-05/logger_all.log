@@ -1,0 +1,769 @@
+[0.414s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.415s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f97b9f686a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f97b9f680d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f97b9f680d0>>)
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.445s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/littled3092/Documents/turbo-turret'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extensions ['ignore', 'ignore_ament_install']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'ignore'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'ignore_ament_install'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extensions ['colcon_pkg']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'colcon_pkg'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extensions ['colcon_meta']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'colcon_meta'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extensions ['ros']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'ros'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extensions ['cmake', 'python']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'cmake'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'python'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extensions ['python_setup_py']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad) by extension 'python_setup_py'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'ignore'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'ignore_ament_install'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extensions ['colcon_pkg']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'colcon_pkg'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extensions ['colcon_meta']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'colcon_meta'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extensions ['ros']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'ros'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extensions ['cmake', 'python']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'cmake'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'python'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extensions ['python_setup_py']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(cad/projectile) by extension 'python_setup_py'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extensions ['ignore', 'ignore_ament_install']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'ignore'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'ignore_ament_install'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extensions ['colcon_pkg']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'colcon_pkg'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extensions ['colcon_meta']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'colcon_meta'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extensions ['ros']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'ros'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extensions ['cmake', 'python']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'cmake'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'python'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extensions ['python_setup_py']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(cad/炮身) by extension 'python_setup_py'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extensions ['ignore', 'ignore_ament_install']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'ignore'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'ignore_ament_install'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extensions ['colcon_pkg']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'colcon_pkg'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extensions ['colcon_meta']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'colcon_meta'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extensions ['ros']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'ros'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extensions ['cmake', 'python']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'cmake'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'python'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extensions ['python_setup_py']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(dep) by extension 'python_setup_py'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['ignore', 'ignore_ament_install']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ignore'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ignore_ament_install'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['colcon_pkg']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'colcon_pkg'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['colcon_meta']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'colcon_meta'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['ros']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ros'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['cmake', 'python']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'cmake'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'python'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['python_setup_py']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'python_setup_py'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extensions ['ignore', 'ignore_ament_install']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'ignore'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'ignore_ament_install'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extensions ['colcon_pkg']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'colcon_pkg'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extensions ['colcon_meta']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'colcon_meta'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extensions ['ros']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'ros'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extensions ['cmake', 'python']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'cmake'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'python'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extensions ['python_setup_py']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告) by extension 'python_setup_py'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extensions ['ignore', 'ignore_ament_install']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'ignore'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'ignore_ament_install'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extensions ['colcon_pkg']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'colcon_pkg'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extensions ['colcon_meta']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'colcon_meta'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extensions ['ros']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'ros'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extensions ['cmake', 'python']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'cmake'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'python'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extensions ['python_setup_py']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/attachments) by extension 'python_setup_py'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extensions ['ignore', 'ignore_ament_install']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'ignore'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'ignore_ament_install'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extensions ['colcon_pkg']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'colcon_pkg'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extensions ['colcon_meta']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'colcon_meta'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extensions ['ros']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'ros'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extensions ['cmake', 'python']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'cmake'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'python'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extensions ['python_setup_py']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css) by extension 'python_setup_py'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extensions ['ignore', 'ignore_ament_install']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'ignore'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'ignore_ament_install'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extensions ['colcon_pkg']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'colcon_pkg'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extensions ['colcon_meta']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'colcon_meta'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extensions ['ros']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'ros'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extensions ['cmake', 'python']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'cmake'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'python'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extensions ['python_setup_py']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/print) by extension 'python_setup_py'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extensions ['ignore', 'ignore_ament_install']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'ignore'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'ignore_ament_install'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extensions ['colcon_pkg']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'colcon_pkg'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extensions ['colcon_meta']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'colcon_meta'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extensions ['ros']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'ros'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extensions ['cmake', 'python']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'cmake'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'python'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extensions ['python_setup_py']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme) by extension 'python_setup_py'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'ignore'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'ignore_ament_install'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extensions ['colcon_pkg']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'colcon_pkg'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extensions ['colcon_meta']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'colcon_meta'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extensions ['ros']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'ros'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extensions ['cmake', 'python']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'cmake'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'python'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extensions ['python_setup_py']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/source) by extension 'python_setup_py'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'ignore'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'ignore_ament_install'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extensions ['colcon_pkg']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'colcon_pkg'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extensions ['colcon_meta']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'colcon_meta'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extensions ['ros']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'ros'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extensions ['cmake', 'python']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'cmake'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'python'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extensions ['python_setup_py']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/css/theme/template) by extension 'python_setup_py'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extensions ['ignore', 'ignore_ament_install']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'ignore'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'ignore_ament_install'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extensions ['colcon_pkg']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'colcon_pkg'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extensions ['colcon_meta']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'colcon_meta'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extensions ['ros']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'ros'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extensions ['cmake', 'python']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'cmake'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'python'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extensions ['python_setup_py']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist) by extension 'python_setup_py'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'ignore'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'ignore_ament_install'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extensions ['colcon_pkg']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'colcon_pkg'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extensions ['colcon_meta']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'colcon_meta'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extensions ['ros']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'ros'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extensions ['cmake', 'python']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'cmake'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'python'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extensions ['python_setup_py']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme) by extension 'python_setup_py'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extensions ['ignore', 'ignore_ament_install']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'ignore'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'ignore_ament_install'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extensions ['colcon_pkg']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'colcon_pkg'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extensions ['colcon_meta']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'colcon_meta'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extensions ['ros']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'ros'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extensions ['cmake', 'python']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'cmake'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'python'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extensions ['python_setup_py']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts) by extension 'python_setup_py'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'ignore_ament_install'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extensions ['colcon_pkg']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'colcon_pkg'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extensions ['colcon_meta']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'colcon_meta'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extensions ['ros']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'ros'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extensions ['cmake', 'python']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'cmake'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'python'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extensions ['python_setup_py']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/league-gothic) by extension 'python_setup_py'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'ignore_ament_install'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extensions ['colcon_pkg']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'colcon_pkg'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extensions ['colcon_meta']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'colcon_meta'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extensions ['ros']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extensions ['python_setup_py']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/dist/theme/fonts/source-sans-pro) by extension 'python_setup_py'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'colcon_meta'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extensions ['ros']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'ros'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extensions ['cmake', 'python']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'cmake'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'python'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extensions ['python_setup_py']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples) by extension 'python_setup_py'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'colcon_meta'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extensions ['ros']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'ros'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extensions ['cmake', 'python']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'cmake'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'python'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extensions ['python_setup_py']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/examples/assets) by extension 'python_setup_py'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'ignore_ament_install'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extensions ['colcon_pkg']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'colcon_pkg'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extensions ['colcon_meta']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'colcon_meta'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extensions ['ros']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'ros'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extensions ['cmake', 'python']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'cmake'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'python'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extensions ['python_setup_py']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js) by extension 'python_setup_py'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'ignore_ament_install'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'colcon_pkg'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extensions ['colcon_meta']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'colcon_meta'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extensions ['ros']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'ros'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extensions ['cmake', 'python']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'cmake'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'python'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extensions ['python_setup_py']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/components) by extension 'python_setup_py'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'ignore'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extensions ['colcon_meta']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'colcon_meta'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'ros'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extensions ['cmake', 'python']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'cmake'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'python'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extensions ['python_setup_py']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/controllers) by extension 'python_setup_py'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'ros'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extensions ['cmake', 'python']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'cmake'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'python'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extensions ['python_setup_py']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/js/utils) by extension 'python_setup_py'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'colcon_pkg'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extensions ['colcon_meta']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'colcon_meta'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extensions ['ros']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'ros'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extensions ['cmake', 'python']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'cmake'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'python'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extensions ['python_setup_py']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin) by extension 'python_setup_py'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extensions ['colcon_pkg']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'colcon_pkg'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extensions ['colcon_meta']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'colcon_meta'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extensions ['ros']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'python'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extensions ['python_setup_py']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/highlight) by extension 'python_setup_py'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extensions ['ignore', 'ignore_ament_install']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'ignore'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'ignore_ament_install'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extensions ['colcon_pkg']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/markdown) by extension 'python_setup_py'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'cmake'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/math) by extension 'python_setup_py'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extensions ['colcon_pkg']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'colcon_pkg'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extensions ['colcon_meta']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'ros'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extensions ['cmake', 'python']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'cmake'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'python'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extensions ['python_setup_py']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/notes) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/search) by extension 'python_setup_py'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extensions ['cmake', 'python']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/plugin/zoom) by extension 'python_setup_py'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'ignore_ament_install'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extensions ['cmake', 'python']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test) by extension 'python_setup_py'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'colcon_meta'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'ros'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extensions ['cmake', 'python']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'cmake'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'python'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extensions ['python_setup_py']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(doc/2023-03-13 機械實作進度報告/test/assets) by extension 'python_setup_py'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'ignore_ament_install'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(pic) by extension 'python_setup_py'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extension 'ignore_ament_install'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extensions ['colcon_pkg']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extension 'colcon_pkg'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extensions ['colcon_meta']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extension 'colcon_meta'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extensions ['ros']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input) by extension 'ros'
+[0.491s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller_input' with type 'ros.ament_python' and name 'controller_input'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extensions ['ignore', 'ignore_ament_install']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extension 'ignore'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extension 'ignore_ament_install'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extensions ['colcon_pkg']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extension 'colcon_pkg'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extensions ['colcon_meta']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extension 'colcon_meta'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extensions ['ros']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_input_srv) by extension 'ros'
+[0.493s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller_input_srv' with type 'ros.ament_cmake' and name 'controller_input_srv'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extensions ['ignore', 'ignore_ament_install']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extension 'ignore'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extension 'ignore_ament_install'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extensions ['colcon_pkg']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extension 'colcon_pkg'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extensions ['colcon_meta']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extension 'colcon_meta'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extensions ['ros']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_control) by extension 'ros'
+[0.498s] DEBUG:colcon.colcon_core.package_identification:Package 'src/main_control' with type 'ros.ament_python' and name 'main_control'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extensions ['ignore', 'ignore_ament_install']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extension 'ignore'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extension 'ignore_ament_install'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extensions ['colcon_pkg']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extension 'colcon_pkg'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extensions ['colcon_meta']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extension 'colcon_meta'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extensions ['ros']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_recognize) by extension 'ros'
+[0.500s] DEBUG:colcon.colcon_core.package_identification:Package 'src/target_recognize' with type 'ros.ament_python' and name 'target_recognize'
+[0.500s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.500s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.500s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.500s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.500s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.535s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/littled3092/Documents/turbo-turret/install/target_recognize' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.535s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/littled3092/Documents/turbo-turret/install/main_control' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.535s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/littled3092/Documents/turbo-turret/install/controller_input_srv' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.535s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/littled3092/Documents/turbo-turret/install/controller_input' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.535s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/littled3092/Documents/turbo-turret/install/controller_input_srv' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.535s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/littled3092/Documents/turbo-turret/install/controller_input' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.537s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/littled3092/Documents/turbo-turret/install
+[0.539s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.541s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'cmake_args' from command line to 'None'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'cmake_target' from command line to 'None'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'cmake_clean_cache' from command line to 'False'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'cmake_clean_first' from command line to 'False'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'cmake_force_configure' from command line to 'False'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'ament_cmake_args' from command line to 'None'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'catkin_cmake_args' from command line to 'None'
+[0.660s] Level 5:colcon.colcon_core.verb:set package 'controller_input' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.660s] DEBUG:colcon.colcon_core.verb:Building package 'controller_input' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/littled3092/Documents/turbo-turret/build/controller_input', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/littled3092/Documents/turbo-turret/install/controller_input', 'merge_install': False, 'path': '/home/littled3092/Documents/turbo-turret/src/controller_input', 'symlink_install': False, 'test_result_base': None}
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'cmake_args' from command line to 'None'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'cmake_target' from command line to 'None'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'cmake_clean_cache' from command line to 'False'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'cmake_clean_first' from command line to 'False'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'cmake_force_configure' from command line to 'False'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'ament_cmake_args' from command line to 'None'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'catkin_cmake_args' from command line to 'None'
+[0.662s] Level 5:colcon.colcon_core.verb:set package 'controller_input_srv' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.662s] DEBUG:colcon.colcon_core.verb:Building package 'controller_input_srv' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/littled3092/Documents/turbo-turret/build/controller_input_srv', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/littled3092/Documents/turbo-turret/install/controller_input_srv', 'merge_install': False, 'path': '/home/littled3092/Documents/turbo-turret/src/controller_input_srv', 'symlink_install': False, 'test_result_base': None}
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'cmake_args' from command line to 'None'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'cmake_target' from command line to 'None'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.663s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.664s] Level 5:colcon.colcon_core.verb:set package 'main_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.664s] DEBUG:colcon.colcon_core.verb:Building package 'main_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/littled3092/Documents/turbo-turret/build/main_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/littled3092/Documents/turbo-turret/install/main_control', 'merge_install': False, 'path': '/home/littled3092/Documents/turbo-turret/src/main_control', 'symlink_install': False, 'test_result_base': None}
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'cmake_args' from command line to 'None'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'cmake_target' from command line to 'None'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'cmake_clean_cache' from command line to 'False'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'cmake_clean_first' from command line to 'False'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'cmake_force_configure' from command line to 'False'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'ament_cmake_args' from command line to 'None'
+[0.665s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'catkin_cmake_args' from command line to 'None'
+[0.666s] Level 5:colcon.colcon_core.verb:set package 'target_recognize' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.666s] DEBUG:colcon.colcon_core.verb:Building package 'target_recognize' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/littled3092/Documents/turbo-turret/build/target_recognize', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/littled3092/Documents/turbo-turret/install/target_recognize', 'merge_install': False, 'path': '/home/littled3092/Documents/turbo-turret/src/target_recognize', 'symlink_install': False, 'test_result_base': None}
+[0.666s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.671s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.671s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/littled3092/Documents/turbo-turret/src/controller_input' with build type 'ament_python'
+[0.672s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_input', 'ament_prefix_path')
+[0.679s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.680s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/hook/ament_prefix_path.ps1'
+[0.681s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/hook/ament_prefix_path.dsv'
+[0.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/hook/ament_prefix_path.sh'
+[0.684s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.684s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.693s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/littled3092/Documents/turbo-turret/src/controller_input_srv' with build type 'ament_cmake'
+[0.694s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/littled3092/Documents/turbo-turret/src/controller_input_srv'
+[0.697s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.697s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.707s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/littled3092/Documents/turbo-turret/src/main_control' with build type 'ament_python'
+[0.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('main_control', 'ament_prefix_path')
+[0.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/hook/ament_prefix_path.ps1'
+[0.714s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/hook/ament_prefix_path.dsv'
+[0.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/hook/ament_prefix_path.sh'
+[0.721s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.722s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.736s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/littled3092/Documents/turbo-turret/src/target_recognize' with build type 'ament_python'
+[0.737s] Level 1:colcon.colcon_core.shell:create_environment_hook('target_recognize', 'ament_prefix_path')
+[0.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/hook/ament_prefix_path.ps1'
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/hook/ament_prefix_path.dsv'
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/hook/ament_prefix_path.sh'
+[0.746s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.746s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.282s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/littled3092/Documents/turbo-turret/src/controller_input'
+[1.284s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.284s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake /home/littled3092/Documents/turbo-turret/src/controller_input_srv -DCMAKE_INSTALL_PREFIX=/home/littled3092/Documents/turbo-turret/install/controller_input_srv
+[1.730s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/littled3092/Documents/turbo-turret/src/main_control'
+[1.731s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.731s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.314s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/littled3092/Documents/turbo-turret/src/target_recognize'
+[2.317s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.317s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.164s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/littled3092/Documents/turbo-turret/src/main_control': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/main_control/prefix_override:/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_control build --build-base /home/littled3092/Documents/turbo-turret/build/main_control/build install --record /home/littled3092/Documents/turbo-turret/build/main_control/install.log --single-version-externally-managed
+[3.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/littled3092/Documents/turbo-turret/src/controller_input': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/controller_input/prefix_override:/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller_input build --build-base /home/littled3092/Documents/turbo-turret/build/controller_input/build install --record /home/littled3092/Documents/turbo-turret/build/controller_input/install.log --single-version-externally-managed
+[3.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/littled3092/Documents/turbo-turret/src/target_recognize': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/target_recognize/prefix_override:/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/target_recognize build --build-base /home/littled3092/Documents/turbo-turret/build/target_recognize/build install --record /home/littled3092/Documents/turbo-turret/build/target_recognize/install.log --single-version-externally-managed
+[4.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/littled3092/Documents/turbo-turret/src/main_control' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/main_control/prefix_override:/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_control build --build-base /home/littled3092/Documents/turbo-turret/build/main_control/build install --record /home/littled3092/Documents/turbo-turret/build/main_control/install.log --single-version-externally-managed
+[4.096s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control' for CMake module files
+[4.103s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control' for CMake config files
+[4.104s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control/lib'
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control/bin'
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control/lib/pkgconfig/main_control.pc'
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages'
+[4.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('main_control', 'pythonpath')
+[4.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/hook/pythonpath.ps1'
+[4.112s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/hook/pythonpath.dsv'
+[4.113s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/hook/pythonpath.sh'
+[4.115s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/main_control/bin'
+[4.115s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(main_control)
+[4.121s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/package.ps1'
+[4.124s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/package.dsv'
+[4.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/package.sh'
+[4.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/package.bash'
+[4.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/main_control/share/main_control/package.zsh'
+[4.145s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/littled3092/Documents/turbo-turret/install/main_control/share/colcon-core/packages/main_control)
+[4.157s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/littled3092/Documents/turbo-turret/src/controller_input' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/controller_input/prefix_override:/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller_input build --build-base /home/littled3092/Documents/turbo-turret/build/controller_input/build install --record /home/littled3092/Documents/turbo-turret/build/controller_input/install.log --single-version-externally-managed
+[4.158s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input' for CMake module files
+[4.159s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input' for CMake config files
+[4.161s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input/lib'
+[4.161s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input/bin'
+[4.162s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input/lib/pkgconfig/controller_input.pc'
+[4.162s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages'
+[4.163s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_input', 'pythonpath')
+[4.169s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/hook/pythonpath.ps1'
+[4.170s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/hook/pythonpath.dsv'
+[4.170s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/hook/pythonpath.sh'
+[4.172s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input/bin'
+[4.172s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller_input)
+[4.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/package.ps1'
+[4.178s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/package.dsv'
+[4.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/package.sh'
+[4.184s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/package.bash'
+[4.185s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input/share/controller_input/package.zsh'
+[4.186s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/littled3092/Documents/turbo-turret/install/controller_input/share/colcon-core/packages/controller_input)
+[4.193s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize' for CMake module files
+[4.194s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/littled3092/Documents/turbo-turret/src/target_recognize' returned '0': PYTHONPATH=/home/littled3092/Documents/turbo-turret/build/target_recognize/prefix_override:/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/target_recognize build --build-base /home/littled3092/Documents/turbo-turret/build/target_recognize/build install --record /home/littled3092/Documents/turbo-turret/build/target_recognize/install.log --single-version-externally-managed
+[4.198s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize' for CMake config files
+[4.200s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize/lib'
+[4.201s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize/bin'
+[4.201s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/pkgconfig/target_recognize.pc'
+[4.202s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages'
+[4.202s] Level 1:colcon.colcon_core.shell:create_environment_hook('target_recognize', 'pythonpath')
+[4.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/hook/pythonpath.ps1'
+[4.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/hook/pythonpath.dsv'
+[4.210s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/hook/pythonpath.sh'
+[4.212s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/target_recognize/bin'
+[4.212s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(target_recognize)
+[4.217s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/package.ps1'
+[4.218s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/package.dsv'
+[4.219s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/package.sh'
+[4.220s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/package.bash'
+[4.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/target_recognize/share/target_recognize/package.zsh'
+[4.222s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/littled3092/Documents/turbo-turret/install/target_recognize/share/colcon-core/packages/target_recognize)
+[4.802s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake /home/littled3092/Documents/turbo-turret/src/controller_input_srv -DCMAKE_INSTALL_PREFIX=/home/littled3092/Documents/turbo-turret/install/controller_input_srv
+[4.809s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake --build /home/littled3092/Documents/turbo-turret/build/controller_input_srv -- -j8 -l8
+[9.863s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake --build /home/littled3092/Documents/turbo-turret/build/controller_input_srv -- -j8 -l8
+[10.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake --install /home/littled3092/Documents/turbo-turret/build/controller_input_srv
+[10.171s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller_input_srv)
+[10.177s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv' for CMake module files
+[10.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/littled3092/Documents/turbo-turret/build/controller_input_srv' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/littled3092/Documents/turbo-turret/install/target_recognize:/home/littled3092/Documents/turbo-turret/install/main_control:/opt/ros/humble /usr/bin/cmake --install /home/littled3092/Documents/turbo-turret/build/controller_input_srv
+[10.180s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv' for CMake config files
+[10.181s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_input_srv', 'cmake_prefix_path')
+[10.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/cmake_prefix_path.ps1'
+[10.187s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/cmake_prefix_path.dsv'
+[10.188s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/cmake_prefix_path.sh'
+[10.189s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib'
+[10.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_input_srv', 'ld_library_path_lib')
+[10.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/ld_library_path_lib.ps1'
+[10.195s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/ld_library_path_lib.dsv'
+[10.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/ld_library_path_lib.sh'
+[10.196s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/bin'
+[10.196s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/pkgconfig/controller_input_srv.pc'
+[10.197s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/python3.10/site-packages'
+[10.198s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/bin'
+[10.202s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.ps1'
+[10.203s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.dsv'
+[10.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.sh'
+[10.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.bash'
+[10.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.zsh'
+[10.205s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/colcon-core/packages/controller_input_srv)
+[10.337s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller_input_srv)
+[10.341s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv' for CMake module files
+[10.343s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv' for CMake config files
+[10.344s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_input_srv', 'cmake_prefix_path')
+[10.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/cmake_prefix_path.ps1'
+[10.350s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/cmake_prefix_path.dsv'
+[10.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/cmake_prefix_path.sh'
+[10.352s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib'
+[10.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_input_srv', 'ld_library_path_lib')
+[10.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/ld_library_path_lib.ps1'
+[10.356s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/ld_library_path_lib.dsv'
+[10.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/hook/ld_library_path_lib.sh'
+[10.357s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/bin'
+[10.357s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/pkgconfig/controller_input_srv.pc'
+[10.358s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/lib/python3.10/site-packages'
+[10.358s] Level 1:colcon.colcon_core.environment:checking '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/bin'
+[10.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.ps1'
+[10.362s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.dsv'
+[10.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.sh'
+[10.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.bash'
+[10.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/controller_input_srv/package.zsh'
+[10.365s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/littled3092/Documents/turbo-turret/install/controller_input_srv/share/colcon-core/packages/controller_input_srv)
+[10.366s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.366s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.366s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.366s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.376s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.376s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.376s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.400s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.402s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/littled3092/Documents/turbo-turret/install/local_setup.ps1'
+[10.403s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/littled3092/Documents/turbo-turret/install/_local_setup_util_ps1.py'
+[10.407s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/littled3092/Documents/turbo-turret/install/setup.ps1'
+[10.411s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/littled3092/Documents/turbo-turret/install/local_setup.sh'
+[10.413s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/littled3092/Documents/turbo-turret/install/_local_setup_util_sh.py'
+[10.414s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/littled3092/Documents/turbo-turret/install/setup.sh'
+[10.416s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/littled3092/Documents/turbo-turret/install/local_setup.bash'
+[10.417s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/littled3092/Documents/turbo-turret/install/setup.bash'
+[10.419s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/littled3092/Documents/turbo-turret/install/local_setup.zsh'
+[10.420s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/littled3092/Documents/turbo-turret/install/setup.zsh'

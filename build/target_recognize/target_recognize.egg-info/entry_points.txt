@@ -1,3 +1,0 @@
-[console_scripts]
-target_recognize = target_recognize.target_recognize:main
-

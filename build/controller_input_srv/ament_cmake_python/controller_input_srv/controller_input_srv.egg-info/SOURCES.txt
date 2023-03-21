@@ -1,8 +1,0 @@
-setup.py
-controller_input_srv/__init__.py
-controller_input_srv.egg-info/PKG-INFO
-controller_input_srv.egg-info/SOURCES.txt
-controller_input_srv.egg-info/dependency_links.txt
-controller_input_srv.egg-info/top_level.txt
-controller_input_srv/srv/__init__.py
-controller_input_srv/srv/_controller.py
