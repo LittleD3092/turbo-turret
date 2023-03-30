@@ -58,7 +58,7 @@ void loop()
         yawStep.stop();
         Serial.println("stopped");
     }
-    else if(input == "runCWW")
+    else if(input == "runCCW")
     {
         yawStep.setSpeed(-1000);
         Serial.println("running counter-clockwise");
