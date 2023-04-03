@@ -9,10 +9,14 @@ class ControllerInputService(Node):
     def __init__(self):
         super().__init__('controller_input')
         self.srv = self.create_service(Controller, 'controller_input', self.callback)
+        self.state = Controller.Request()
 
     def callback(self, request, response):
         if request.title == 'ping':
             response.title = 'pong'
+        elif request.title == 'get':
+            response = self.state
+            response.title = 'controller state'
         else:
             response.title = 'unknown command'
         
@@ -37,14 +41,41 @@ def main(args=None):
     while running:
         # Handle pygame events
         for event in pygame.event.get():
+            # close signal
             if event.type == pygame.QUIT:
                 running = False
-            elif event.type == pygame.KEYDOWN:
+            
+            # keydown signal
+            if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     running = False
 
+        # joystick reading
+        # axis
+        controller_input.state.left_stick_x = round(pygame.joystick.Joystick(0).get_axis(0))
+        controller_input.state.left_stick_y = round(pygame.joystick.Joystick(0).get_axis(1))
+        controller_input.state.left_trigger = round(pygame.joystick.Joystick(0).get_axis(2))
+        controller_input.state.right_stick_x = round(pygame.joystick.Joystick(0).get_axis(3))
+        controller_input.state.right_stick_y = round(pygame.joystick.Joystick(0).get_axis(4))
+        controller_input.state.right_trigger = round(pygame.joystick.Joystick(0).get_axis(5))
+
+        # hat
+        controller_input.dpad[0], controller_input.dpad[1] = pygame.joystick.Joystick(0).get_hat(0)
+
+        # button
+        controller_input.state.a = pygame.joystick.Joystick(0).get_button(0)
+        controller_input.state.b = pygame.joystick.Joystick(0).get_button(1)
+        controller_input.state.x = pygame.joystick.Joystick(0).get_button(2)
+        controller_input.state.y = pygame.joystick.Joystick(0).get_button(3)
+        controller_input.state.left_bumper = pygame.joystick.Joystick(0).get_button(4)
+        controller_input.state.right_bumper = pygame.joystick.Joystick(0).get_button(5)
+        controller_input.state.share = pygame.joystick.Joystick(0).get_button(6)
+        controller_input.state.options = pygame.joystick.Joystick(0).get_button(7)
+        controller_input.state.left_stick_press = pygame.joystick.Joystick(0).get_button(9)
+        controller_input.state.right_stick_press = pygame.joystick.Joystick(0).get_button(10)
+
         # Screen wipe
-        screen.fill("purple")
+        screen.fill("black")
         pygame.display.flip()
 
         # Handle spinning

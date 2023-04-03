@@ -1,3 +1,20 @@
 string title
 ---
 string title
+int32 left_stick_x
+int32 left_stick_y
+int32 left_trigger
+int32 right_stick_x
+int32 right_stick_y
+int32 right_trigger
+int32[2] dpad
+bool a
+bool b
+bool x
+bool y
+bool left_bumper
+bool right_bumper
+bool share
+bool options
+bool left_stick_press
+bool right_stick_press
