@@ -2,18 +2,20 @@
     "version": 4,
     "configurations": [
         {
-            "name": "Linux",
+            "name": "ROS",
             "compilerPath": "/usr/bin/gcc",
             "compilerArgs": [],
-            "intelliSenseMode": "linux-gcc-x64",
+            "intelliSenseMode": "gcc-x64",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${HOME}/Arduino/**",
-                "${HOME}/arduino-ide_2.0.4_Linux_64bit/**"
+                "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/include/**",
+                "/opt/ros/humble/include/**",
+                "/home/littled3092/Documents/turbo-turret/src/controller_input_srv/include/**",
+                "/home/littled3092/Documents/turbo-turret/src/turret_srv/include/**",
+                "/usr/include/**"
             ],
             "forcedInclude": [],
-            "cStandard": "c17",
-            "cppStandard": "gnu++17",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14",
             "defines": []
         },
         {

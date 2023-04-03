@@ -1,11 +1,21 @@
 {
     "editor.fontFamily": "'consolas', 'Droid Sans Mono', 'monospace', monospace",
     "python.autoComplete.extraPaths": [
+        "/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages",
+        "/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages",
+        "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages",
+        "/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "python.analysis.extraPaths": [
+        "/home/littled3092/Documents/turbo-turret/install/target_recognize/lib/python3.10/site-packages",
+        "/home/littled3092/Documents/turbo-turret/install/main_control/lib/python3.10/site-packages",
+        "/home/littled3092/Documents/turbo-turret/install/controller_input_srv/local/lib/python3.10/dist-packages",
+        "/home/littled3092/Documents/turbo-turret/install/controller_input/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
+    ],
+    "terminal.integrated.env.linux":  {"VSCODE_WS": "${workspaceFolder}"},
+    "terminal.integrated.env.windows":{"VSCODE_WS": "${workspaceFolder}"},
 }
