@@ -53,15 +53,15 @@ while running:
                 running = False
 
             # ABXY
-            if pygame.joystick.Joystick(0).get_button(0):
+            if pygame.joystick.Joystick(0).get_button(0):   # A
                 player.change_color("green")
-            elif pygame.joystick.Joystick(0).get_button(1):
+            elif pygame.joystick.Joystick(0).get_button(1): # B
                 player.change_color("red")
-            elif pygame.joystick.Joystick(0).get_button(2):
+            elif pygame.joystick.Joystick(0).get_button(2): # X
                 player.change_color("blue")
-            elif pygame.joystick.Joystick(0).get_button(3):
+            elif pygame.joystick.Joystick(0).get_button(3): # Y
                 player.change_color("yellow")
-            elif pygame.joystick.Joystick(0).get_button(6):
+            elif pygame.joystick.Joystick(0).get_button(9): # left stick pressed
                 player.change_color("white")
 
     # speed update
