@@ -20,8 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'controller_input = controller_input.controller_input:main',
-            'service = controller_input.service_member_function:main',
+            'controller_input = controller_input.controller_input:main'
         ],
     },
 )

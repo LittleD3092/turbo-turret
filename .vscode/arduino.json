@@ -1,0 +1,6 @@
+{
+    "sketch": "src/turret/script/arduino_side/arduino_side.ino",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "port": "/dev/ttyACM0"
+}
