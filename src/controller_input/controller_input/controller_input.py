@@ -37,7 +37,6 @@ def main(args=None):
     joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
     if len(joysticks) == 0:
         print("No joysticks found")
-        runWithoutJoystick()
 
     # Main loop
     while running:
