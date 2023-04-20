@@ -31,7 +31,7 @@ def main(args=None):
     # Pygame init
     pygame.init()
     pygame.joystick.init()
-    screen = pygame.display.set_mode((1280, 720))
+    screen = pygame.display.set_mode((1280, 720), pygame.FULLSCREEN)
     clock = pygame.time.Clock()
     running = True
     joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
@@ -75,6 +75,10 @@ def main(args=None):
         controller_input.state.options = bool(pygame.joystick.Joystick(0).get_button(7))
         controller_input.state.left_stick_press = bool(pygame.joystick.Joystick(0).get_button(9))
         controller_input.state.right_stick_press = bool(pygame.joystick.Joystick(0).get_button(10))
+
+        # exit if option button is pressed
+        if controller_input.state.options:
+            running = False
 
         # Screen wipe
         screen.fill("black")
