@@ -62,7 +62,7 @@ def main(args=None):
         controller_input.state.right_trigger = round(pygame.joystick.Joystick(0).get_axis(5))
 
         # hat
-        controller_input.dpad[0], controller_input.dpad[1] = pygame.joystick.Joystick(0).get_hat(0)
+        controller_input.state.dpad[0], controller_input.state.dpad[1] = pygame.joystick.Joystick(0).get_hat(0)
 
         # button
         controller_input.state.a = pygame.joystick.Joystick(0).get_button(0)
