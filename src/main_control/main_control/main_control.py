@@ -30,20 +30,23 @@ def main(args=None):
     running = True
     while running:
         response = controller_input_client.send_request('get')
-        controller_input_client.get_logger().info(
-            'Result of get: %s' % response.title)
-        controller_input_client.get_logger().info(
-            'Left stick x: %s' % response.left_stick_x)
-        controller_input_client.get_logger().info(
-            'Left stick y: %s' % response.left_stick_y)
-        controller_input_client.get_logger().info(
-            'Left trigger: %s' % response.left_trigger)
-        controller_input_client.get_logger().info(
-            'Right stick x: %s' % response.right_stick_x)
-        controller_input_client.get_logger().info(
-            'Right stick y: %s' % response.right_stick_y)
-        controller_input_client.get_logger().info(
-            'Right trigger: %s' % response.right_trigger)
+        if (response.left_stick_x != 0 or response.left_stick_y != 0 or 
+            response.left_trigger != -1 or response.right_stick_x != 0 or 
+            response.right_stick_y != 0 or response.right_trigger != -1):
+            controller_input_client.get_logger().info(
+                'Left stick x: %s' % response.left_stick_x)
+            controller_input_client.get_logger().info(
+                'Left stick y: %s' % response.left_stick_y)
+            controller_input_client.get_logger().info(
+                'Left trigger: %s' % response.left_trigger)
+            controller_input_client.get_logger().info(
+                'Right stick x: %s' % response.right_stick_x)
+            controller_input_client.get_logger().info(
+                'Right stick y: %s' % response.right_stick_y)
+            controller_input_client.get_logger().info(
+                'Right trigger: %s' % response.right_trigger)
+            controller_input_client.get_logger().info(
+                '----------------------------------------')
 
     controller_input_client.destroy_node()
     rclpy.shutdown()

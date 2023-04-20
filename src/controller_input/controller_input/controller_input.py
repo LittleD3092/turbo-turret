@@ -88,7 +88,7 @@ def main(args=None):
         pygame.display.flip()
 
         # Handle spinning
-        rclpy.spin_once(controller_input)
+        rclpy.spin_once(controller_input, timeout_sec=0.01)
         clock.tick(60)
 
     # Shutdown
