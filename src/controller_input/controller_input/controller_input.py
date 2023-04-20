@@ -65,16 +65,16 @@ def main(args=None):
         controller_input.state.dpad[0], controller_input.state.dpad[1] = pygame.joystick.Joystick(0).get_hat(0)
 
         # button
-        controller_input.state.a = pygame.joystick.Joystick(0).get_button(0)
-        controller_input.state.b = pygame.joystick.Joystick(0).get_button(1)
-        controller_input.state.x = pygame.joystick.Joystick(0).get_button(2)
-        controller_input.state.y = pygame.joystick.Joystick(0).get_button(3)
-        controller_input.state.left_bumper = pygame.joystick.Joystick(0).get_button(4)
-        controller_input.state.right_bumper = pygame.joystick.Joystick(0).get_button(5)
-        controller_input.state.share = pygame.joystick.Joystick(0).get_button(6)
-        controller_input.state.options = pygame.joystick.Joystick(0).get_button(7)
-        controller_input.state.left_stick_press = pygame.joystick.Joystick(0).get_button(9)
-        controller_input.state.right_stick_press = pygame.joystick.Joystick(0).get_button(10)
+        controller_input.state.a = bool(pygame.joystick.Joystick(0).get_button(0))
+        controller_input.state.b = bool(pygame.joystick.Joystick(0).get_button(1))
+        controller_input.state.x = bool(pygame.joystick.Joystick(0).get_button(2))
+        controller_input.state.y = bool(pygame.joystick.Joystick(0).get_button(3))
+        controller_input.state.left_bumper = bool(pygame.joystick.Joystick(0).get_button(4))
+        controller_input.state.right_bumper = bool(pygame.joystick.Joystick(0).get_button(5))
+        controller_input.state.share = bool(pygame.joystick.Joystick(0).get_button(6))
+        controller_input.state.options = bool(pygame.joystick.Joystick(0).get_button(7))
+        controller_input.state.left_stick_press = bool(pygame.joystick.Joystick(0).get_button(9))
+        controller_input.state.right_stick_press = bool(pygame.joystick.Joystick(0).get_button(10))
 
         # Screen wipe
         screen.fill("black")
