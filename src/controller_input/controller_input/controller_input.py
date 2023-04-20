@@ -9,7 +9,7 @@ class ControllerInputService(Node):
     def __init__(self):
         super().__init__('controller_input')
         self.srv = self.create_service(Controller, 'controller_input', self.callback)
-        self.state = Controller.Request()
+        self.state = Controller.Response()
 
     def callback(self, request, response):
         if request.title == 'ping':
