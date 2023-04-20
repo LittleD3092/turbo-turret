@@ -23,7 +23,6 @@ class ControllerInputService(Node):
         self.get_logger().info('Incoming request: %s' % request.title)
         return response
 
-
 def main(args=None):
     # ROS2 init
     rclpy.init(args=args)
@@ -36,6 +35,9 @@ def main(args=None):
     clock = pygame.time.Clock()
     running = True
     joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
+    if len(joysticks) == 0:
+        print("No joysticks found")
+        runWithoutJoystick()
 
     # Main loop
     while running:
@@ -76,6 +78,9 @@ def main(args=None):
 
         # Screen wipe
         screen.fill("black")
+
+        # Draw joystick state
+        pygame.draw.circle(screen, "red", (int(640 + controller_input.state.left_stick_x * 100), int(360 + controller_input.state.left_stick_y * 100)), 10)
         pygame.display.flip()
 
         # Handle spinning
