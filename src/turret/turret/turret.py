@@ -29,7 +29,7 @@ class Turret(Node):
     # Precondition: None
     # Postcondition: create ros service with name 'turret'
     def __init__(self):
-        super.__init__('turret')
+        super().__init__('turret')
         self.srv = self.create_service(TurretSrv, 'turret', self.turret_callback)
         self.state = 'stop'
 
@@ -89,7 +89,9 @@ def main(args = None):
     # Test serial port
     while True:
         ser.write(b'ping\n')
-        respond = ser.readline().strip()
+        respond = b''
+        while ser.in_waiting != 0:
+            respond = ser.readline().strip()
         if respond == b'pong':
             printByMe('Arduino is connected.')
             break
