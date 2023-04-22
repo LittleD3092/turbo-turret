@@ -155,5 +155,9 @@ void loop()
         Serial.println("servo lowered");
     }
 
-    delay(1);
+    // clear serial buffer
+    while(Serial.available() > 0)
+        Serial.read();
+
+    delay(50);
 }

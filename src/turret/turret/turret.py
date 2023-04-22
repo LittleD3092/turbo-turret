@@ -84,7 +84,9 @@ class Turret(Node):
                     break
                 time.sleep(0.1)
             response.title = 'OK'
-            
+
+        ser.read_all()
+
         return response
 
 def main(args = None):
