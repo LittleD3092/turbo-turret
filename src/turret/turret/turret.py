@@ -46,10 +46,12 @@ class Turret(Node):
                 ser.write(b'runCW\n')
             elif request.direction == 'CCW':
                 ser.write(b'runCCW\n')
-            elif request.direction == 'lower':
+            elif request.direction == 'lower' and time.time() - self.lastTimeServoMove > 0.25:
                 ser.write(b'lower\n')
-            elif request.direction == 'rise':
+                self.lastTimeServoMove = time.time()
+            elif request.direction == 'rise' and time.time() - self.lastTimeServoMove > 0.25:
                 ser.write(b'rise\n')
+                self.lastTimeServoMove = time.time()
             response.title = 'OK'
             self.state = 'run'
         
