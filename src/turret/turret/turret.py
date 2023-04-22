@@ -39,6 +39,7 @@ class Turret(Node):
         if time.time() - self.lastTimeRecv < 0.1:
             response.title = 'busy'
             return response
+        
         self.lastTimeRecv = time.time()
 
         # case 1: ping
@@ -49,19 +50,24 @@ class Turret(Node):
         if request.title == 'run' and self.state == 'stop':
             if request.direction == 'CW':
                 ser.write(b'runCW\n')
+                printByMe('serial send runCW')
                 self.state = 'run'
             elif request.direction == 'CCW':
                 ser.write(b'runCCW\n')
+                printByMe('serial send runCCW')
                 self.state = 'run'
             elif request.direction == 'lower' and time.time():
                 ser.write(b'lower\n')
+                printByMe('serial send lower')
             elif request.direction == 'rise' and time.time():
                 ser.write(b'rise\n')
+                printByMe('serial send rise')
             response.title = 'OK'
         
         # case 3: stop
         if request.title == 'stop' and self.state == 'run':
             ser.write(b'stop\n')
+            printByMe('serial send stop')
             response.title = 'OK'
             self.state = 'stop'
         
@@ -88,6 +94,7 @@ def main(args = None):
     while True:
         ser.write(b'ping\n')
         respond = b''
+        time.sleep(0.1)
         while ser.in_waiting != 0:
             respond = ser.readline().strip()
         if respond == b'pong':
