@@ -33,6 +33,8 @@ class Turret(Node):
         self.srv = self.create_service(TurretSrv, 'turret', self.turret_callback)
         self.state = 'stop'
 
+        self.lastTimeServoMove = 0
+
     def turret_callback(self, request, response):
         # case 1: ping
         if request.title == 'ping':
@@ -67,6 +69,18 @@ class Turret(Node):
                 time.sleep(0.1)
             response.title = 'OK'
 
+        # case 5: rise
+        if request.title == 'rise' and self.state == 'stop' and time.time() - self.lastTimeServoMove > 0.25:
+            ser.write(b'rise\n')
+            response.title = 'OK'
+            self.lastTimeServoMove = time.time()
+
+        # case 6: lower
+        if request.title == 'lower' and self.state == 'stop' and time.time() - self.lastTimeServoMove > 0.25:
+            ser.write(b'lower\n')
+            response.title = 'OK'
+            self.lastTimeServoMove = time.time()
+            
         return response
 
 def main(args = None):

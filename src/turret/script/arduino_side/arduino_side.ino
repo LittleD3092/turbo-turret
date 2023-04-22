@@ -1,12 +1,43 @@
 #include <AccelStepper.h>
+#include <Servo.h>
 
-#define YAW_STEP_DIR 8
-#define YAW_STEP_PUL 9
+#define YAW_STEP_DIR 10
+#define YAW_STEP_PUL 12
 #define YAW_STEP_INTERFACE 1
 #define YAW_STEP_PER_REV 1600
 
 // stepper motor
 AccelStepper yawStep(YAW_STEP_INTERFACE, YAW_STEP_PUL, YAW_STEP_DIR);
+
+// servo
+Servo rightServo;
+Servo leftServo;
+#define RIGHT_SERVO_PIN 8
+#define LEFT_SERVO_PIN 6
+
+#define RIGHT_SERVO_MIN 100
+#define RIGHT_SERVO_MAX 60
+
+#define LEFT_SERVO_MIN 80
+#define LEFT_SERVO_MAX 120
+
+#define RIGHT_SERVO_CENTER 90
+#define LEFT_SERVO_CENTER 90
+
+#define RIGHT_SERVO_INCREMENT -5
+#define LEFT_SERVO_INCREMENT 5
+
+// check whether x is between min and max (inclusive)
+// Precondition: x is the value to check, min and max are the bounds
+// Postcondition: returns true if x is between min and max, false otherwise.
+//                note that min can be greater than max, and the function
+//                still works.
+bool between(int x, int min, int max)
+{
+    if(min > max)
+        return between(x, max, min);
+    return x >= min && x <= max;
+}
 
 void setup()
 {
@@ -15,20 +46,19 @@ void setup()
 
     yawStep.setMaxSpeed(1000);
     yawStep.setAcceleration(500);
-
     Serial.write("Stepper motor initialized\n");
+
+    rightServo.attach(RIGHT_SERVO_PIN);
+    leftServo.attach(LEFT_SERVO_PIN);
+    rightServo.write(RIGHT_SERVO_CENTER);
+    leftServo.write(LEFT_SERVO_CENTER);
+    Serial.write("Servo initialized\n");
 }
 
 void loop()
 {
     // read serial
-    String input;
-    while(Serial.available() > 0)
-    {
-        String buf = Serial.readString();
-        input += buf;
-    }
-    input = input.substring(0, input.length() - 1);
+    String input = Serial.readStringUntil('\n');
 
     if(input != "")
         Serial.println("received: " + input);
@@ -47,13 +77,8 @@ void loop()
         while(input != "stop")
         {
             yawStep.runSpeed();
-            input = "";
-            while(Serial.available() > 0)
-            {
-                String buf = Serial.readString();
-                input += buf;
-            }
-            input = input.substring(0, input.length() - 1);
+            if(Serial.available() > 0)
+                input = Serial.readStringUntil('\n');
         }
         yawStep.stop();
         Serial.println("stopped");
@@ -65,13 +90,8 @@ void loop()
         while(input != "stop")
         {
             yawStep.runSpeed();
-            input = "";
-            while(Serial.available() > 0)
-            {
-                String buf = Serial.readString();
-                input += buf;
-            }
-            input = input.substring(0, input.length() - 1);
+            if(Serial.available() > 0)
+                input = Serial.readStringUntil('\n');
         }
         yawStep.stop();
         Serial.println("stopped");
@@ -82,6 +102,14 @@ void loop()
     {
         // parse input for position
         char pos = input[2]; // + or -
+
+        if(pos != '+' && pos != '-')
+        {
+            Serial.print("invalid position: ");
+            Serial.println(pos);
+            Serial.println("position must be + or -");
+        }
+
         int steps = 0;
         for(int i = 3; i < input.length(); i++)
         {
@@ -98,6 +126,33 @@ void loop()
         yawStep.runToPosition();
 
         Serial.print("done");
+    }
+
+    // servo commands
+    if(input == "rise" && 
+       between(rightServo.read() + 
+               RIGHT_SERVO_INCREMENT, 
+               RIGHT_SERVO_MIN, RIGHT_SERVO_MAX) && 
+       between(leftServo.read() + 
+               LEFT_SERVO_INCREMENT, 
+               LEFT_SERVO_MIN, LEFT_SERVO_MAX))
+    {
+        rightServo.write(rightServo.read() + RIGHT_SERVO_INCREMENT);
+        leftServo.write(leftServo.read() + LEFT_SERVO_INCREMENT);
+        Serial.println("servo raised");
+    }
+
+    if(input == "lower" && 
+       between(rightServo.read() - 
+               RIGHT_SERVO_INCREMENT, 
+               RIGHT_SERVO_MIN, RIGHT_SERVO_MAX) && 
+       between(leftServo.read() - 
+               LEFT_SERVO_INCREMENT, 
+               LEFT_SERVO_MIN, LEFT_SERVO_MAX))
+    {
+        rightServo.write(rightServo.read() - RIGHT_SERVO_INCREMENT);
+        leftServo.write(leftServo.read() - LEFT_SERVO_INCREMENT);
+        Serial.println("servo lowered");
     }
 
     delay(1);

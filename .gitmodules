@@ -1,0 +1,9 @@
+[submodule "src/ros2_usb_camera"]
+	path = src/ros2_usb_camera
+	url = https://github.com/klintan/ros2_usb_camera.git
+[submodule "src/usb_cam"]
+	path = src/usb_cam
+	url = https://github.com/ros-drivers/usb_cam.git
+[submodule "src/camera_lite"]
+	path = src/camera_lite
+	url = https://github.com/slaghuis/camera_lite.git
