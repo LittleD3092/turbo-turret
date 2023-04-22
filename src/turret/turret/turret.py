@@ -12,6 +12,10 @@ def printByMe(printMsg = ''):
 import serial
 try:    
     ser = serial.Serial('/dev/ttyACM0', 9600)
+except:
+    print('Serial port 0 is unavailable.')
+try:
+    ser = serial.Serial('/dev/ttyACM1', 9600)
 except: 
     printByMe('Arduino is not connected.')
     exit()
