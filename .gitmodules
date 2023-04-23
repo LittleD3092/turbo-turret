@@ -7,3 +7,19 @@
 [submodule "src/camera_lite"]
 	path = src/camera_lite
 	url = https://github.com/slaghuis/camera_lite.git
+[submodule "src/vision_opencv"]
+	path = src/vision_opencv
+	url = https://github.com/ros-perception/vision_opencv.git
+	branch = humble
+[submodule "src/image_common"]
+	path = src/image_common
+	url = https://github.com/ros-perception/image_common.git
+	branch = humble
+[submodule "src/image_transport_plugins"]
+	path = src/image_transport_plugins
+	url = https://github.com/ros-perception/image_transport_plugins.git
+	branch = humble
+[submodule "src/ros2_v4l2_camera"]
+	path = src/ros2_v4l2_camera
+	url = https://gitlab.com/LittleD3092/ros2_v4l2_camera
+	branch = humble

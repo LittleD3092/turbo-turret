@@ -72,7 +72,7 @@ void loop()
     // constant speed movement
     if(input == "runCW")
     {
-        yawStep.setSpeed(1000);
+        yawStep.setSpeed(-1000);
         Serial.println("running clockwise");
         while(input != "stop")
         {
@@ -85,7 +85,7 @@ void loop()
     }
     else if(input == "runCCW")
     {
-        yawStep.setSpeed(-1000);
+        yawStep.setSpeed(+1000);
         Serial.println("running counter-clockwise");
         while(input != "stop")
         {
