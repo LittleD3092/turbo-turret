@@ -8,7 +8,7 @@ from rclpy.node import Node
 import numpy as np
 import time
 
-USE_TURRET = False
+USE_TURRET = True
 
 class ControllerInputClient(Node):
     def __init__(self):
