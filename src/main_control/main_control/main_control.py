@@ -195,6 +195,7 @@ def main(args=None):
                 for [yaw, pitch] in result_angles:
                     print("send request to turret: ", 'to'+str(int(yaw*3200/360)))
                     turret_client.send_request('to', 'left-right', int(yaw * 3200 / 360))
+                    print("send request to turret: ", 'to'+str(int(pitch))
                     turret_client.send_request('to', 'up-down', int(pitch))
                 print("moved turret to the target")
 

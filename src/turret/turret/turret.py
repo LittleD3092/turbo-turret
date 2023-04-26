@@ -40,6 +40,8 @@ class Turret(Node):
         self.lastTimeRecv = time.time()
 
     def turret_callback(self, request, response):
+        print("recv request: " + request.title)
+
         if time.time() - self.lastTimeRecv < 0.05:
             response.title = 'busy'
             return response
@@ -99,6 +101,7 @@ class Turret(Node):
 
         ser.read_all()
 
+        print('respond with title: ' + response.title)
         return response
 
 def main(args = None):
