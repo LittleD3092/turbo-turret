@@ -84,8 +84,8 @@ class AngleCalculator:
     # Postcondition: return the yaw and pitch angle of the point with respect to the front axis of the robot (in degree)
     def calculate_angle(self, img_x, img_y):
         r = self.calculate_robot_coor(img_x, img_y)
-        yaw = np.arctan2(r[0], r[2]) * 180 / np.pi
-        pitch = -np.arctan2(r[1], r[2]) * 180 / np.pi
+        yaw = -np.arctan2(r[0], r[2]) * 180 / np.pi
+        pitch = np.arctan2(r[1], r[2]) * 180 / np.pi
         return (yaw, pitch)
 
 
