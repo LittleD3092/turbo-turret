@@ -1,8 +1,8 @@
 #include <AccelStepper.h>
 #include <Servo.h>
 
-#define YAW_STEP_DIR 10
-#define YAW_STEP_PUL 12
+#define YAW_STEP_DIR 10 // CW+
+#define YAW_STEP_PUL 12 // CLK+
 #define YAW_STEP_INTERFACE 1
 #define YAW_STEP_PER_REV 1600
 
