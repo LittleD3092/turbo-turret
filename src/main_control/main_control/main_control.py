@@ -177,7 +177,7 @@ def main(args=None):
             # remove duplicate targets
             for i in range(len(result_middle_point)):
                 for j in range(i + 1, len(result_middle_point)):
-                    if result_middle_point[i] == result_middle_point[j]:
+                    if np.linalg.norm(result_middle_point[i]) - np.linalg.norm(result_middle_point[j]) < 30:
                         result_middle_point[j] = [-1, -1]
 
             # calculate angles
@@ -188,6 +188,15 @@ def main(args=None):
                 yaw, pitch = angle_calculator.calculate_angle(x, y)
                 result_angles.append([yaw, pitch])
             print('Target(s) angle(s): ', result_angles)
+
+            if USE_TURRET:
+                # move turret to the target
+                for [yaw, pitch] in result_angles:
+                    turret_client.send_request('to', '', int(yaw * 3200 / 360))
+                    for i in range(round(abs(pitch) / 5)):
+                        turret_client.send_request('run', 'rise' if pitch > 0 else 'lower', 0)
+
+                # TODO: shoot
 
             # raise flag to prevent multiple shoot
             shootFlag = True
