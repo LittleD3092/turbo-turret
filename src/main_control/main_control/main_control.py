@@ -191,21 +191,28 @@ def main(args=None):
 
             if USE_TURRET:
                 # move turret to the target
+                print("moving...")
                 for [yaw, pitch] in result_angles:
+                    print("send request to turret: ", 'to'+str(int(yaw*3200/360)))
                     turret_client.send_request('to', '', int(yaw * 3200 / 360))
                     for i in range(round(abs(pitch) / 5)):
                         turret_client.send_request('run', 'rise' if pitch > 0 else 'lower', 0)
                         time.sleep(0.1)
+                        print('send request to turret:', 'rise' if pitch > 0 else 'lower', 0)
+                print("moved turret to the target")
 
                 # TODO: shoot
 
             # raise flag to prevent multiple shoot
             shootFlag = True
+            print("setted shooted flag")
         # reset flag
         elif response.right_trigger != 1:
             shootFlag = False
+            print("resetted shooted flag")
 
 
+    print("ending...")
     controller_input_client.destroy_node()
     rclpy.shutdown()
 
