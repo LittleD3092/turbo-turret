@@ -40,7 +40,7 @@ class Turret(Node):
         self.lastTimeRecv = time.time()
 
     def turret_callback(self, request, response):
-        if time.time() - self.lastTimeRecv < 0.1:
+        if time.time() - self.lastTimeRecv < 0.05:
             response.title = 'busy'
             return response
         
@@ -76,7 +76,7 @@ class Turret(Node):
             self.state = 'stop'
         
         # case 4: to
-        if request.title == 'to' and self.state == 'stop':
+        if request.title == 'to' and self.state == 'stop' and request.direction == 'left-right':
             ser.write(b'to')
             ser.write(b'+' if request.position >= 0 else b'-')
             ser.write(str(abs(request.position)).encode())
@@ -86,6 +86,14 @@ class Turret(Node):
                 respond = ser.readline().strip()
                 if respond == b'done':
                     break
+                time.sleep(0.1)
+            response.title = 'OK'
+
+        if request.title == 'to' and self.state == 'stop' and request.direction == 'up-down':
+            angle = 0
+            while angle < abs(request.position):
+                ser.write(b'lower\n' if request.position >= 0 else b'rise\n')
+                angle += 5
                 time.sleep(0.1)
             response.title = 'OK'
 
