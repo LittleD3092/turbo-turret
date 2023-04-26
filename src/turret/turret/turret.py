@@ -97,6 +97,7 @@ class Turret(Node):
                 ser.write(b'lower\n' if request.position >= 0 else b'rise\n')
                 angle += 5
                 time.sleep(0.1)
+                print('stuck in to up-down')
             response.title = 'OK'
 
         ser.read_all()
