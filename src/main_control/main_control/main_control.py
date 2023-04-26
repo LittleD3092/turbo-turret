@@ -120,6 +120,7 @@ def main(args=None):
     running = True
     shootFlag = False
     previousOutputTime = 0
+    previousSentToTurretTime = 0
     while running:
         # test input and print on console
         response = controller_input_client.send_request('get')
@@ -159,7 +160,8 @@ def main(args=None):
                 turret_client.send_request('run', 'rise')
 
             # no input for turret
-            if response.right_stick_x == 0 and response.right_stick_y == 0:
+            if response.right_stick_x == 0 and response.right_stick_y == 0 and time.time() - previousOutputTime > 0.5:
+                previousOutputTime = time.time()
                 turret_client.send_request('stop')
 
         # shoot on right trigger pressed
@@ -203,11 +205,9 @@ def main(args=None):
 
             # raise flag to prevent multiple shoot
             shootFlag = True
-            print("setted shooted flag")
         # reset flag
         elif response.right_trigger != 1:
             shootFlag = False
-            print("resetted shooted flag")
 
 
     print("ending...")
