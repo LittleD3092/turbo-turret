@@ -88,11 +88,7 @@ class Turret(Node):
             ser.write(str(abs(request.position)).encode())
             ser.write(b'\n')
             # wait until the turret is at the position
-            while True:
-                respond = ser.readline().strip()
-                if respond == b'done':
-                    break
-                time.sleep(0.1)
+            time.sleep(1)
             response.title = 'OK'
 
         print("checking servo to command")
