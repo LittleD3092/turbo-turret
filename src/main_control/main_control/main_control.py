@@ -195,6 +195,7 @@ def main(args=None):
                     turret_client.send_request('to', '', int(yaw * 3200 / 360))
                     for i in range(round(abs(pitch) / 5)):
                         turret_client.send_request('run', 'rise' if pitch > 0 else 'lower', 0)
+                        time.sleep(0.1)
 
                 # TODO: shoot
 
