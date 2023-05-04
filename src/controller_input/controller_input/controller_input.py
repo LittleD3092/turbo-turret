@@ -147,7 +147,8 @@ def main(args=None):
             # resize without distortion
             img = cv2.resize(img, (int((800-54) * img.shape[1] / img.shape[0]), 800-54))
             img = pygame.image.frombuffer(img.tostring(), img.shape[1::-1], "RGB")
-            screen.blit(img, (0, 0))
+            # draw image on center
+            screen.blit(img, (640 - img.get_width() // 2, 0))
 
         # Update screen
         pygame.display.flip()
