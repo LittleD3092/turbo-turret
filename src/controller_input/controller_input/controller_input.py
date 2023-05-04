@@ -23,6 +23,28 @@ class ControllerInputService(Node):
         self.get_logger().info('Incoming request: %s' % request.title)
         return response
 
+class Color:
+    def __init__(self, hex_color):
+        self.red = int(hex_color[1:3], 16)
+        self.green = int(hex_color[3:5], 16)
+        self.blue = int(hex_color[5:7], 16)
+
+    def getRGBtuple(self):
+        return (self.red, self.green, self.blue)
+
+COLORS = {
+    'red': Color('#D52941').getRGBtuple(),
+    'dim_red': Color('#990D35').getRGBtuple(),
+    'blue': Color('#2E86AB').getRGBtuple(),
+    'dim_blue': Color('#1A4B61').getRGBtuple(),
+    'green': Color('#7FB069').getRGBtuple(),
+    'dim_green': Color('#457135').getRGBtuple(),
+    'yellow': Color('#E7A94B').getRGBtuple(),
+    'dim_yellow': Color('#B47618').getRGBtuple(),
+
+    'grey': Color('#474747').getRGBtuple(),
+}
+
 def main(args=None):
     # ROS2 init
     rclpy.init(args=args)
@@ -83,8 +105,16 @@ def main(args=None):
         # Screen wipe
         screen.fill("black")
 
-        # Draw joystick state
-        pygame.draw.circle(screen, "red", (int(640 + controller_input.state.left_stick_x * 100), int(360 + controller_input.state.left_stick_y * 100)), 10)
+        # Draw Status bar
+        pygame.draw.rect(screen, COLORS['grey'], (0, 720-54, 1280, 720))
+
+        # Draw ABXY state on left bottom
+        pygame.draw.circle(screen, COLORS['dim_green' if controller_input.state.a else 'green'], (50, 720-27), 25)
+        pygame.draw.circle(screen, COLORS['dim_red' if controller_input.state.b else 'red'], (100, 720-27), 25)
+        pygame.draw.circle(screen, COLORS['dim_blue' if controller_input.state.x else 'blue'], (150, 720-27), 25)
+        pygame.draw.circle(screen, COLORS['dim_yellow' if controller_input.state.y else 'yellow'], (200, 720-27), 25)
+        
+        # Update screen
         pygame.display.flip()
 
         # Handle spinning
