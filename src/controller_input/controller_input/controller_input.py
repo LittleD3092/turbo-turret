@@ -110,9 +110,9 @@ def main(args=None):
 
         # Draw ABXY state on left bottom
         pygame.draw.circle(screen, COLORS['dim_green' if controller_input.state.a else 'green'], (50, 800-27), 25)
-        pygame.draw.circle(screen, COLORS['dim_red' if controller_input.state.b else 'red'], (150, 800-27), 25)
-        pygame.draw.circle(screen, COLORS['dim_blue' if controller_input.state.x else 'blue'], (250, 800-27), 25)
-        pygame.draw.circle(screen, COLORS['dim_yellow' if controller_input.state.y else 'yellow'], (350, 800-27), 25)
+        pygame.draw.circle(screen, COLORS['dim_red' if controller_input.state.b else 'red'], (50 + 75, 800-27), 25)
+        pygame.draw.circle(screen, COLORS['dim_blue' if controller_input.state.x else 'blue'], (50 + 75 * 2, 800-27), 25)
+        pygame.draw.circle(screen, COLORS['dim_yellow' if controller_input.state.y else 'yellow'], (50 + 75 * 3, 800-27), 25)
         
         # Update screen
         pygame.display.flip()
