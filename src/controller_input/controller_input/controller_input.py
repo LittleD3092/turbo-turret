@@ -32,7 +32,7 @@ class ImageSubscriber(Node):
         super().__init__('image_subscriber')
         self.subscription = self.create_subscription(
             Image,
-            '/camera/image_raw',
+            '/image_raw',
             self.callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -143,7 +143,6 @@ def main(args=None):
         # Display cv2 image
         img = image_subscriber.getImage()
         if img is not None:
-            print(img.shape)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             img = cv2.resize(img, (1280, 800-54))
             img = pygame.image.frombuffer(img.tostring(), img.shape[1::-1], "RGB")
