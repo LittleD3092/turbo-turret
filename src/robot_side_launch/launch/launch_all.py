@@ -13,6 +13,8 @@ def generate_launch_description():
         ),
         Node(
             package="turret",
-            executable="turret"
+            executable="turret",
+            # enable screen output
+            output="screen"
         ),
     ])

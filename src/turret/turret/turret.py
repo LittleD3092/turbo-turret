@@ -1,13 +1,6 @@
 import os
 import time
 
-# Print the message, with the name of the file
-# Precondition: printMsg is a string you want to print
-# Postcondition: print the message, with the name 
-#                of this script
-def printByMe(printMsg = ''):
-    print(os.path.basename(__file__) + ': ' + printMsg)
-
 # Arduino
 import serial
 try:    
@@ -20,12 +13,17 @@ except:
         printByMe('Arduino is not connected.')
         exit()
 
-
 # ROS2
 import rclpy
 from rclpy.node import Node
 from turret_srv.srv import Turret as TurretSrv
 
+# Print the message, with the name of the file
+# Precondition: printMsg is a string you want to print
+# Postcondition: print the message, with the name 
+#                of this script
+def printByMe(printMsg = ''):
+    print(os.path.basename(__file__) + ': ' + printMsg)
 
 # Class Turret for ros service
 class Turret(Node):
