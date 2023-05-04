@@ -2,8 +2,12 @@ from controller_input_srv.srv import Controller
 
 import rclpy
 from rclpy.node import Node
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
 
 import pygame
+
+import cv2
 
 class ControllerInputService(Node):
     def __init__(self):
@@ -22,6 +26,25 @@ class ControllerInputService(Node):
         
         self.get_logger().info('Incoming request: %s' % request.title)
         return response
+
+class ImageSubscriber(Node):
+    def __init__(self):
+        super().__init__('image_subscriber')
+        self.subscription = self.create_subscription(
+            Image,
+            '/camera/image_raw',
+            self.callback,
+            10)
+        self.subscription  # prevent unused variable warning
+
+        self.currentImage = None
+
+    def callback(self, msg):
+        # self.get_logger().info('Received image')
+        self.currentImage = CvBridge().imgmsg_to_cv2(msg, "bgr8")
+
+    def getImage(self):
+        return self.currentImage
 
 class Color:
     def __init__(self, hex_color):
@@ -60,6 +83,9 @@ def main(args=None):
     if len(joysticks) == 0:
         print("No joysticks found")
         running = False
+
+    # Image subscriber init
+    image_subscriber = ImageSubscriber()
 
     # Main loop
     while running:
@@ -114,11 +140,20 @@ def main(args=None):
         pygame.draw.circle(screen, COLORS['dim_blue' if controller_input.state.x else 'blue'], (50 + 75 * 2, 800-27), 25)
         pygame.draw.circle(screen, COLORS['dim_yellow' if controller_input.state.y else 'yellow'], (50 + 75 * 3, 800-27), 25)
         
+        # Display cv2 image
+        img = image_subscriber.getImage()
+        if img is not None:
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            img = cv2.resize(img, (1280, 800-54))
+            img = pygame.image.frombuffer(img.tostring(), img.shape[1::-1], "RGB")
+            screen.blit(img, (0, 0))
+
         # Update screen
         pygame.display.flip()
 
         # Handle spinning
         rclpy.spin_once(controller_input, timeout_sec=0.01)
+        rclpy.spin_once(image_subscriber, timeout_sec=0.01)
         clock.tick(60)
 
     # Shutdown
