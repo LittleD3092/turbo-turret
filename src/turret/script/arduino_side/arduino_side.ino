@@ -6,8 +6,14 @@
 #define YAW_STEP_INTERFACE 1
 #define YAW_STEP_PER_REV 1600
 
+#define FIRING_STEP_DIR 4 // CW+
+#define FIRING_STEP_PUL 5 // CLK+
+#define FIRING_STEP_INTERFACE 1
+#define FIRING_STEP_PER_REV 1600
+
 // stepper motor
 AccelStepper yawStep(YAW_STEP_INTERFACE, YAW_STEP_PUL, YAW_STEP_DIR);
+AccelStepper firingStep(FIRING_STEP_INTERFACE, FIRING_STEP_PUL, FIRING_STEP_DIR);
 
 // servo
 Servo rightServo;
@@ -46,6 +52,8 @@ void setup()
 
     yawStep.setMaxSpeed(1000);
     yawStep.setAcceleration(500);
+    firingStep.setMaxSpeed(4000);
+    firingStep.setAcceleration(4000);
     Serial.write("Stepper motor initialized\n");
 
     rightServo.attach(RIGHT_SERVO_PIN);
@@ -153,6 +161,15 @@ void loop()
         rightServo.write(rightServo.read() - RIGHT_SERVO_INCREMENT);
         leftServo.write(leftServo.read() - LEFT_SERVO_INCREMENT);
         Serial.println("servo lowered");
+    }
+
+    if(input == "fire")
+    {
+        firingStep.move(FIRING_STEP_PER_REV * 0.5);
+        firingStep.runToPosition();
+        firingStep.move(-FIRING_STEP_PER_REV * 0.55);
+        firingStep.runToPosition();
+        Serial.println("fired");
     }
 
     // clear serial buffer

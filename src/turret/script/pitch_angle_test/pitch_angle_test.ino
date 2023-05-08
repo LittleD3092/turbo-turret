@@ -7,7 +7,7 @@ Servo rightServo;
 Servo leftServo;
 
 #define RIGHT_SERVO_PIN 8
-#define LEFT_SERVO_PIN 9
+#define LEFT_SERVO_PIN 6
 
 #define RIGHT_SERVO_MIN 180
 #define RIGHT_SERVO_MAX 0
