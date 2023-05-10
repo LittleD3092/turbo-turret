@@ -98,6 +98,11 @@ class Turret(Node):
                 time.sleep(0.1)
             response.title = 'OK'
 
+        print("check fire command")
+        if request.title == 'fire':
+            ser.write(b'fire\n')
+            response.title = 'OK'
+
         ser.read_all()
 
         print('respond with title: ' + response.title)

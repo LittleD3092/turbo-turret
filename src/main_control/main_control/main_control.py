@@ -21,6 +21,7 @@ class ControllerInputClient(Node):
         # for remembering state
         self.currentState = Controller.Response()
         self.lastState = Controller.Response()
+        self.EMPTY_STATE = Controller.Response()
 
     def send_request(self, title = ''):
         self.req.title = title
@@ -47,6 +48,9 @@ class ControllerInputClient(Node):
     def getTuple(self, axis):
         # For dpad
         return getattr(self.currentState, axis)
+
+    def hasInput(self):
+        return self.currentState != self.EMPTY_STATE
     
 class TurretClient(Node):
     def __init__(self):
@@ -146,49 +150,38 @@ def main(args=None):
     previousOutputTime = 0
     while running:
         # test input and print on console
-        response = controller_input_client.send_request('get')
-        if ((response.left_stick_x != 0 or response.left_stick_y != 0 or 
-             response.left_trigger != -1 or response.right_stick_x != 0 or 
-             response.right_stick_y != 0 or response.right_trigger != -1) and 
-             (time.time() - previousOutputTime > 0.5) and
-             shootFlag == False):
-            previousOutputTime = time.time()
-            controller_input_client.get_logger().info(
-                'Left stick x: %s' % response.left_stick_x)
-            controller_input_client.get_logger().info(
-                'Left stick y: %s' % response.left_stick_y)
-            controller_input_client.get_logger().info(
-                'Left trigger: %s' % response.left_trigger)
-            controller_input_client.get_logger().info(
-                'Right stick x: %s' % response.right_stick_x)
-            controller_input_client.get_logger().info(
-                'Right stick y: %s' % response.right_stick_y)
-            controller_input_client.get_logger().info(
-                'Right trigger: %s' % response.right_trigger)
-            controller_input_client.get_logger().info(
-                '----------------------------------------')
+        controller_input_client.refresh()
+        if controller_input_client.hasInput():
+            variables = vars(controller_input_client.currentState)
+            for var_name, value in variables.items():
+                if value != 0:
+                    print(var_name, value)
             
         # mapping control
         if USE_TURRET:
             # left right
-            if response.right_stick_x == 1:
+            if controller_input_client.value('right_stick_x') == 1:
                 turret_client.send_request('run', 'CW')
-            elif response.right_stick_x == -1:
+            elif controller_input_client.value('right_stick_x') == -1:
                 turret_client.send_request('run', 'CCW')
-            
+
             # up down
-            if response.right_stick_y == 1:
+            if controller_input_client.value('right_stick_y') == 1:
                 turret_client.send_request('run', 'lower')
-            elif response.right_stick_y == -1:
+            elif controller_input_client.value('right_stick_y') == -1:
                 turret_client.send_request('run', 'rise')
 
             # no input for turret
-            if response.right_stick_x == 0 and response.right_stick_y == 0 and time.time() - previousOutputTime > 0.5:
+            if (
+                controller_input_client.value('right_stick_x') == 0 and 
+                controller_input_client.value('right_stick_y') == 0 and 
+                time.time() - previousOutputTime > 0.5
+            ):
                 previousOutputTime = time.time()
                 turret_client.send_request('stop')
 
-        # shoot on right trigger pressed
-        if response.right_trigger == 1 and shootFlag == False:
+        # aim on left trigger pressed
+        if controller_input_client.value("left_trigger") == 1:
             response = target_recognize_client.send_request('detect')
             result = response.result_array
             result = np.reshape(result, (response.result_array_height, response.result_array_width))
@@ -223,15 +216,11 @@ def main(args=None):
                     print("send request to turret: ", 'to'+str(int(pitch)))
                     turret_client.send_request('to', 'up-down', int(pitch))
                 print("moved turret to the target")
-
-                # TODO: shoot
-
-            # raise flag to prevent multiple shoot
-            shootFlag = True
-        # reset flag
-        elif response.right_trigger != 1:
-            shootFlag = False
-
+        # shoot on right trigger pressed
+        if controller_input_client.value("right_trigger") == 1:
+            print("shooting...")
+            turret_client.send_request('fire')
+            print("shot")
 
     print("ending...")
     controller_input_client.destroy_node()
