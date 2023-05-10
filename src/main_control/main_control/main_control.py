@@ -18,11 +18,35 @@ class ControllerInputClient(Node):
             self.get_logger().info('controller service not available, waiting again...')
         self.req = Controller.Request()
 
+        # for remembering state
+        self.currentState = Controller.Response()
+        self.lastState = Controller.Response()
+
     def send_request(self, title = ''):
         self.req.title = title
         self.future = self.cli.call_async(self.req)
         rclpy.spin_until_future_complete(self, self.future)
         return self.future.result()
+    
+    def refresh(self):
+        self.lastState = self.currentState
+        self.currentState = self.send_request()
+
+    def press(self, button):
+        return getattr(self.currentState, button)
+    
+    def pressed(self, button):
+        return getattr(self.currentState, button) and not getattr(self.lastState, button)
+    
+    def released(self, button):
+        return not getattr(self.currentState, button) and getattr(self.lastState, button)
+    
+    def value(self, axis):
+        return getattr(self.currentState, axis)
+    
+    def getTuple(self, axis):
+        # For dpad
+        return getattr(self.currentState, axis)
     
 class TurretClient(Node):
     def __init__(self):
@@ -120,7 +144,6 @@ def main(args=None):
     running = True
     shootFlag = False
     previousOutputTime = 0
-    previousSentToTurretTime = 0
     while running:
         # test input and print on console
         response = controller_input_client.send_request('get')
