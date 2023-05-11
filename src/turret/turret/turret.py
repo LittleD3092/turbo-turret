@@ -72,7 +72,7 @@ class Turret(Node):
         
         print("checking stop command")
         # case 3: stop
-        if request.title == 'stop' and self.state == 'run':
+        if request.title == 'stop' and (self.state == 'run' or self.state == 'move'):
             ser.write(b'stop\n')
             printByMe('serial send stop')
             response.title = 'OK'
@@ -88,6 +88,28 @@ class Turret(Node):
             # wait until the turret is at the position
             time.sleep(1)
             response.title = 'OK'
+
+        print("checking move command") # chassis
+        # case 5: move
+        if request.title == 'move':
+            if request.direction == 'forward':
+                ser.write(b'move foward\n')
+            elif request.direction == 'backward':
+                ser.write(b'move backward\n')
+            elif request.direction == 'front left':
+                ser.write(b'move front left\n')
+            elif request.direction == 'front right':
+                ser.write(b'move front right\n')
+            elif request.direction == 'back left':
+                ser.write(b'move back left\n')
+            elif request.direction == 'back right':
+                ser.write(b'move back right\n')
+        # case 6: turn
+        if request.title == 'turn':
+            if request.direction == 'left':
+                ser.write(b'turn left\n')
+            elif request.direction == 'right':
+                ser.write(b'turn right\n')
 
         print("checking servo to command")
         if request.title == 'to' and self.state == 'stop' and request.direction == 'up-down':

@@ -222,6 +222,26 @@ def main(args=None):
             turret_client.send_request('fire')
             print("shot")
 
+        # left stick
+        leftStickX = controller_input_client.value('left_stick_x')
+        leftStickY = controller_input_client.value('left_stick_y')
+        if leftStickX == 0 and leftStickY == -1:
+            turret_client.send_request('move', 'forward')
+        elif leftStickX == 0 and leftStickY == 1:
+            turret_client.send_request('move', 'backward')
+        elif leftStickX == -1 and leftStickY == -1:
+            turret_client.send_request('move', 'front left')
+        elif leftStickX == 1 and leftStickY == -1:
+            turret_client.send_request('move', 'front right')
+        elif leftStickX == -1 and leftStickY == 1:
+            turret_client.send_request('move', 'back left')
+        elif leftStickX == 1 and leftStickY == 1:
+            turret_client.send_request('move', 'back right')
+        elif leftStickX == -1 and leftStickY == 0:
+            turret_client.send_request('turn', 'left')
+        elif leftStickX == 1 and leftStickY == 0:
+            turret_client.send_request('turn', 'right')
+
     print("ending...")
     controller_input_client.destroy_node()
     rclpy.shutdown()
