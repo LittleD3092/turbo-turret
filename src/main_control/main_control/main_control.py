@@ -152,10 +152,8 @@ def main(args=None):
         # test input and print on console
         controller_input_client.refresh()
         if controller_input_client.hasInput():
-            variables = vars(controller_input_client.currentState)
-            for var_name, value in variables.items():
-                if value != 0:
-                    print(var_name, value)
+            print("left_stick: ", controller_input_client.getTuple('left_stick'))
+            print("right_stick: ", controller_input_client.getTuple('right_stick'))
             
         # mapping control
         if USE_TURRET:
