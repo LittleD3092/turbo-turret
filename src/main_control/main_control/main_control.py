@@ -21,9 +21,6 @@ class ControllerInputClient(Node):
         # for remembering state
         self.currentState = Controller.Response()
         self.lastState = Controller.Response()
-        self.EMPTY_STATE = Controller.Response()
-        self.EMPTY_STATE.left_trigger = -1
-        self.EMPTY_STATE.right_trigger = -1
 
     def send_request(self, title = ''):
         self.req.title = title
@@ -50,9 +47,6 @@ class ControllerInputClient(Node):
     def getTuple(self, axis):
         # For dpad
         return getattr(self.currentState, axis)
-
-    def hasInput(self):
-        return self.currentState != self.EMPTY_STATE
     
 class TurretClient(Node):
     def __init__(self):
@@ -153,7 +147,7 @@ def main(args=None):
     while running:
         # test input and print on console
         controller_input_client.refresh()
-        if controller_input_client.hasInput():
+        if controller_input_client.value('left_stick_x') or controller_input_client.value('left_stick_y') or controller_input_client.value('right_stick_x') or controller_input_client.value('right_stick_y'):
             print("left_stick: ", (controller_input_client.value('left_stick_x'), controller_input_client.value('left_stick_y')))
             print("right_stick: ", (controller_input_client.value('right_stick_x'), controller_input_client.value('right_stick_y')))
             
