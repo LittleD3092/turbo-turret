@@ -46,12 +46,10 @@ class Turret(Node):
         
         self.lastTimeRecv = time.time()
 
-        print("checking ping command")
         # case 1: ping
         if request.title == 'ping':
             response.title = 'pong'
         
-        print("checking run command")
         # case 2: run
         if request.title == 'run' and self.state == 'stop':
             if request.direction == 'CW':
@@ -70,7 +68,6 @@ class Turret(Node):
                 printByMe('serial send rise')
             response.title = 'OK'
         
-        print("checking stop command")
         # case 3: stop
         if request.title == 'stop' and (self.state == 'run' or self.state == 'move'):
             ser.write(b'stop\n')
@@ -78,7 +75,6 @@ class Turret(Node):
             response.title = 'OK'
             self.state = 'stop'
         
-        print("checking step to command")
         # case 4: to
         if request.title == 'to' and self.state == 'stop' and request.direction == 'left-right':
             ser.write(b'to')
@@ -89,7 +85,6 @@ class Turret(Node):
             time.sleep(1)
             response.title = 'OK'
 
-        print("checking move command") # chassis
         # case 5: move
         if request.title == 'move':
             if request.direction == 'forward':
@@ -111,7 +106,6 @@ class Turret(Node):
             elif request.direction == 'right':
                 ser.write(b'turn right\n')
 
-        print("checking servo to command")
         if request.title == 'to' and self.state == 'stop' and request.direction == 'up-down':
             angle = 0
             while angle < abs(request.position):
@@ -120,7 +114,6 @@ class Turret(Node):
                 time.sleep(0.1)
             response.title = 'OK'
 
-        print("check fire command")
         if request.title == 'fire':
             ser.write(b'fire\n')
             response.title = 'OK'
