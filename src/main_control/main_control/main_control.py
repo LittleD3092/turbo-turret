@@ -22,6 +22,8 @@ class ControllerInputClient(Node):
         self.currentState = Controller.Response()
         self.lastState = Controller.Response()
         self.EMPTY_STATE = Controller.Response()
+        self.EMPTY_STATE.left_trigger = -1
+        self.EMPTY_STATE.right_trigger = -1
 
     def send_request(self, title = ''):
         self.req.title = title
