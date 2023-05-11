@@ -30,7 +30,7 @@ class ControllerInputClient(Node):
     
     def refresh(self):
         self.lastState = self.currentState
-        self.currentState = self.send_request()
+        self.currentState = self.send_request('get')
 
     def press(self, button):
         return getattr(self.currentState, button)
