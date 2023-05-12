@@ -142,7 +142,6 @@ def main(args=None):
 
     # Main loop
     running = True
-    shootFlag = False
     previousOutputTime = 0
     while running:
         # test input and print on console
@@ -164,15 +163,6 @@ def main(args=None):
                 turret_client.send_request('run', 'lower')
             elif controller_input_client.value('right_stick_y') == -1:
                 turret_client.send_request('run', 'rise')
-
-            # no input for turret
-            if (
-                controller_input_client.value('right_stick_x') == 0 and 
-                controller_input_client.value('right_stick_y') == 0 and 
-                time.time() - previousOutputTime > 0.5
-            ):
-                previousOutputTime = time.time()
-                turret_client.send_request('stop')
 
         # aim on left trigger pressed
         if controller_input_client.value("left_trigger") == 1:
@@ -235,9 +225,17 @@ def main(args=None):
             turret_client.send_request('turn', 'left')
         elif leftStickX == 1 and leftStickY == 0:
             turret_client.send_request('turn', 'right')
-        elif leftStickX == 0 and leftStickY == 0:
+
+        # no input for turret
+        if (
+            controller_input_client.value('right_stick_x') == 0 and 
+            controller_input_client.value('right_stick_y') == 0 and 
+            controller_input_client.value('left_stick_x') == 0 and
+            controller_input_client.value('left_stick_y') == 0 and
+            time.time() - previousOutputTime > 0.5
+        ):
+            previousOutputTime = time.time()
             turret_client.send_request('stop')
-            time.sleep(0.5)
 
     print("ending...")
     controller_input_client.destroy_node()

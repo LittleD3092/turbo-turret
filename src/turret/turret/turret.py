@@ -99,6 +99,8 @@ class Turret(Node):
                 ser.write(b'move back left\n')
             elif request.direction == 'back right':
                 ser.write(b'move back right\n')
+            self.state = 'move'
+
         # case 6: turn
         if request.title == 'turn':
             if request.direction == 'left':
