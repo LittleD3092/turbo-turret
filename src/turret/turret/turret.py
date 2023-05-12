@@ -88,7 +88,7 @@ class Turret(Node):
         # case 5: move
         if request.title == 'move':
             if request.direction == 'forward':
-                ser.write(b'move foward\n')
+                ser.write(b'move forward\n')
             elif request.direction == 'backward':
                 ser.write(b'move backward\n')
             elif request.direction == 'front left':

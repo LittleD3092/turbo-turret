@@ -115,7 +115,7 @@ public:
         {
             digitalWrite(in1, LOW);
             digitalWrite(in2, HIGH);
-            analogWrite(pwm, speed);
+            analogWrite(pwm, -speed);
         }
         else
         {
