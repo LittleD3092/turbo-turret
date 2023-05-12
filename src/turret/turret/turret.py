@@ -107,6 +107,7 @@ class Turret(Node):
                 ser.write(b'turn left\n')
             elif request.direction == 'right':
                 ser.write(b'turn right\n')
+            self.state = 'move'
 
         if request.title == 'to' and self.state == 'stop' and request.direction == 'up-down':
             angle = 0
