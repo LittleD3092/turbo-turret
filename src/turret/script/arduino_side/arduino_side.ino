@@ -50,12 +50,12 @@ Servo leftServo;
 #define CHASSIS_LEFT_DC_IN1 2
 #define CHASSIS_LEFT_DC_IN2 4
 #define CHASSIS_LEFT_DC_PWM 3
-#define CHASSIS_LEFT_DC_MAX_SPEED 200
+#define CHASSIS_LEFT_DC_MAX_SPEED 255
 #define CHASSIS_LEFT_DC_INVERTED 0
 #define CHASSIS_RIGHT_DC_IN1 5
 #define CHASSIS_RIGHT_DC_IN2 7
 #define CHASSIS_RIGHT_DC_PWM 6
-#define CHASSIS_RIGHT_DC_MAX_SPEED 180
+#define CHASSIS_RIGHT_DC_MAX_SPEED 255
 #define CHASSIS_RIGHT_DC_INVERTED 0
 
 // global variables
@@ -268,7 +268,7 @@ void loop()
     // constant speed movement
     if(input == "runCW")
     {
-        yawStep.setSpeed(-1000);
+        yawStep.setSpeed(+1000);
         Serial.println("running clockwise");
         while(input != "stop")
         {
@@ -281,7 +281,7 @@ void loop()
     }
     else if(input == "runCCW")
     {
-        yawStep.setSpeed(+1000);
+        yawStep.setSpeed(-1000);
         Serial.println("running counter-clockwise");
         while(input != "stop")
         {
