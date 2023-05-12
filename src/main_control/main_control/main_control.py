@@ -232,7 +232,7 @@ def main(args=None):
             controller_input_client.value('right_stick_y') == 0 and 
             controller_input_client.value('left_stick_x') == 0 and
             controller_input_client.value('left_stick_y') == 0 and
-            time.time() - previousOutputTime > 0.5
+            time.time() - previousOutputTime > 0.1
         ):
             previousOutputTime = time.time()
             turret_client.send_request('stop')
