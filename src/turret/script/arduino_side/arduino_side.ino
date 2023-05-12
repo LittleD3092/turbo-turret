@@ -48,14 +48,14 @@ Servo leftServo;
 
 // dc motor
 #define CHASSIS_LEFT_DC_IN1 2
-#define CHASSIS_LEFT_DC_IN2 3
-#define CHASSIS_LEFT_DC_PWM 4
+#define CHASSIS_LEFT_DC_IN2 4
+#define CHASSIS_LEFT_DC_PWM 3
 #define CHASSIS_LEFT_DC_MAX_SPEED 200
 #define CHASSIS_LEFT_DC_INVERTED 0
 #define CHASSIS_RIGHT_DC_IN1 5
-#define CHASSIS_RIGHT_DC_IN2 6
-#define CHASSIS_RIGHT_DC_PWM 7
-#define CHASSIS_RIGHT_DC_MAX_SPEED 200
+#define CHASSIS_RIGHT_DC_IN2 7
+#define CHASSIS_RIGHT_DC_PWM 6
+#define CHASSIS_RIGHT_DC_MAX_SPEED 180
 #define CHASSIS_RIGHT_DC_INVERTED 0
 
 // global variables
@@ -145,11 +145,8 @@ public:
 
     void move(int leftSpeed, int rightSpeed)
     {
-        leftSpeed = this->leftMotorInverted ? -leftSpeed : leftSpeed;
-        rightSpeed = this->rightMotorInverted ? -rightSpeed : rightSpeed;
-
-        leftMotor.write(abs(leftSpeed));
-        rightMotor.write(abs(rightSpeed));
+        leftMotor.write(leftSpeed);
+        rightMotor.write(rightSpeed);
     }
 
     void moveForward()

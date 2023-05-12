@@ -235,6 +235,9 @@ def main(args=None):
             turret_client.send_request('turn', 'left')
         elif leftStickX == 1 and leftStickY == 0:
             turret_client.send_request('turn', 'right')
+        elif leftStickX == 0 and leftStickY == 0:
+            turret_client.send_request('stop')
+            time.sleep(0.5)
 
     print("ending...")
     controller_input_client.destroy_node()
