@@ -318,7 +318,7 @@ void loop()
         Serial.println("moving to position " + String(steps) + " steps...");
 
         // move to position
-        yawStep.move(steps);
+        yawStep.move(-steps);
         yawStep.runToPosition();
 
         Serial.print("done");
