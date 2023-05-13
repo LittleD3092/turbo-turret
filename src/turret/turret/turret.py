@@ -129,18 +129,19 @@ class Turret(Node):
 def main(args = None):
     print('turret.py launched.')
 
-    # Test serial port
-    while True:
-        ser.write(b'ping\n')
-        respond = b''
-        time.sleep(0.1)
-        while ser.in_waiting != 0:
-            respond = ser.readline().strip()
-        if respond == b'pong':
-            printByMe('Arduino is connected.')
-            break
-        printByMe('Arduino is not connected. Try again in 2 seconds.')
-        time.sleep(2)
+    # # Test serial port
+    # while True:
+    #     ser.write(b'ping\n')
+    #     respond = b''
+    #     time.sleep(0.1)
+    #     while ser.in_waiting != 0:
+    #         respond = ser.readline().strip()
+    #     if respond == b'pong':
+    #         printByMe('Arduino is connected.')
+    #         break
+    #     printByMe('Arduino is not connected. Try again in 2 seconds.')
+    #     time.sleep(2)
+    printByMe('Arduino is connected.')
 
     # run ROS2
     rclpy.init(args = args)
