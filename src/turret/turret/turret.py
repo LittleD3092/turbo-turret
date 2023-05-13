@@ -139,8 +139,8 @@ def main(args = None):
         if respond == b'pong':
             printByMe('Arduino is connected.')
             break
-        printByMe('Arduino is not connected. Try again in 5 seconds.')
-        time.sleep(5)
+        printByMe('Arduino is not connected. Try again in 2 seconds.')
+        time.sleep(2)
 
     # run ROS2
     rclpy.init(args = args)
