@@ -204,6 +204,7 @@ def main(args=None):
         if controller_input_client.value("right_trigger") == 1:
             print("shooting...")
             turret_client.send_request('fire')
+            time.sleep(0.5)
             print("shot")
 
         # left stick
