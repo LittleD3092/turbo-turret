@@ -5,7 +5,8 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package="main_control",
-            executable="main_control"
+            executable="main_control",
+            # output="screen"
         ),
         Node(
             package="v4l2_camera",

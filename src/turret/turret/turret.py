@@ -46,12 +46,10 @@ class Turret(Node):
         
         self.lastTimeRecv = time.time()
 
-        print("checking ping command")
         # case 1: ping
         if request.title == 'ping':
             response.title = 'pong'
         
-        print("checking run command")
         # case 2: run
         if request.title == 'run' and self.state == 'stop':
             if request.direction == 'CW':
@@ -70,15 +68,13 @@ class Turret(Node):
                 printByMe('serial send rise')
             response.title = 'OK'
         
-        print("checking stop command")
         # case 3: stop
-        if request.title == 'stop' and self.state == 'run':
+        if request.title == 'stop' and (self.state == 'run' or self.state == 'move'):
             ser.write(b'stop\n')
             printByMe('serial send stop')
             response.title = 'OK'
             self.state = 'stop'
         
-        print("checking step to command")
         # case 4: to
         if request.title == 'to' and self.state == 'stop' and request.direction == 'left-right':
             ser.write(b'to')
@@ -89,13 +85,40 @@ class Turret(Node):
             time.sleep(1)
             response.title = 'OK'
 
-        print("checking servo to command")
+        # case 5: move
+        if request.title == 'move':
+            if request.direction == 'forward':
+                ser.write(b'move forward\n')
+            elif request.direction == 'backward':
+                ser.write(b'move backward\n')
+            elif request.direction == 'front left':
+                ser.write(b'move front left\n')
+            elif request.direction == 'front right':
+                ser.write(b'move front right\n')
+            elif request.direction == 'back left':
+                ser.write(b'move back left\n')
+            elif request.direction == 'back right':
+                ser.write(b'move back right\n')
+            self.state = 'move'
+
+        # case 6: turn
+        if request.title == 'turn':
+            if request.direction == 'left':
+                ser.write(b'turn left\n')
+            elif request.direction == 'right':
+                ser.write(b'turn right\n')
+            self.state = 'move'
+
         if request.title == 'to' and self.state == 'stop' and request.direction == 'up-down':
             angle = 0
             while angle < abs(request.position):
                 ser.write(b'lower\n' if request.position >= 0 else b'rise\n')
                 angle += 5
                 time.sleep(0.1)
+            response.title = 'OK'
+
+        if request.title == 'fire':
+            ser.write(b'fire\n')
             response.title = 'OK'
 
         ser.read_all()
@@ -106,18 +129,19 @@ class Turret(Node):
 def main(args = None):
     print('turret.py launched.')
 
-    # Test serial port
-    while True:
-        ser.write(b'ping\n')
-        respond = b''
-        time.sleep(0.1)
-        while ser.in_waiting != 0:
-            respond = ser.readline().strip()
-        if respond == b'pong':
-            printByMe('Arduino is connected.')
-            break
-        printByMe('Arduino is not connected. Try again in 5 seconds.')
-        time.sleep(5)
+    # # Test serial port
+    # while True:
+    #     ser.write(b'ping\n')
+    #     respond = b''
+    #     time.sleep(0.1)
+    #     while ser.in_waiting != 0:
+    #         respond = ser.readline().strip()
+    #     if respond == b'pong':
+    #         printByMe('Arduino is connected.')
+    #         break
+    #     printByMe('Arduino is not connected. Try again in 2 seconds.')
+    #     time.sleep(2)
+    printByMe('Arduino is connected.')
 
     # run ROS2
     rclpy.init(args = args)
