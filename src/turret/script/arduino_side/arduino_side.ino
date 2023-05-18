@@ -6,13 +6,15 @@
 #define YAW_STEP_INTERFACE 1
 #define YAW_STEP_PER_REV 1600
 
-#define FIRING_STEP_DIR 14 // CW+
-#define FIRING_STEP_PUL 15 // CLK+
+#define FIRING_STEP_DIR 8 // CW+
+#define FIRING_STEP_PUL 9 // CLK+
 #define FIRING_STEP_INTERFACE 1
 #define FIRING_STEP_PER_REV 1600
+#define FIRING_STEP_MAX_SPEED 4000
+#define FIRING_STEP_ACCELERATION 4000
 
-#define GENEVA_STEP_DIR 16 // CW+
-#define GENEVA_STEP_PUL 17 // CLK+
+#define GENEVA_STEP_DIR A4 // CW+
+#define GENEVA_STEP_PUL A5 // CLK+
 #define GENEVA_STEP_INTERFACE 1
 #define GENEVA_STEP_PER_REV 1600
 
@@ -25,26 +27,7 @@
 
 // stepper motor
 AccelStepper yawStep(YAW_STEP_INTERFACE, YAW_STEP_PUL, YAW_STEP_DIR);
-AccelStepper firingStep(FIRING_STEP_INTERFACE, FIRING_STEP_PUL, FIRING_STEP_DIR);
 AccelStepper genevaStep(GENEVA_STEP_INTERFACE, GENEVA_STEP_PUL, GENEVA_STEP_DIR);
-
-// servo
-Servo rightServo;
-Servo leftServo;
-#define RIGHT_SERVO_PIN 8
-#define LEFT_SERVO_PIN 9
-
-#define RIGHT_SERVO_MIN 100
-#define RIGHT_SERVO_MAX 60
-
-#define LEFT_SERVO_MIN 80
-#define LEFT_SERVO_MAX 120
-
-#define RIGHT_SERVO_CENTER 90
-#define LEFT_SERVO_CENTER 90
-
-#define RIGHT_SERVO_INCREMENT -5
-#define LEFT_SERVO_INCREMENT 5
 
 // dc motor
 #define CHASSIS_LEFT_DC_IN1 2
@@ -73,14 +56,36 @@ public:
     }
     void moveForward()
     {
-        stepper.move(PISTON_STEP_PER_REV * -0.48);
+        stepper.move(PISTON_STEP_PER_REV * -0.44);
         stepper.runToPosition();
     }
     void moveBackward()
     {
-        stepper.move(PISTON_STEP_PER_REV * 0.48);
+        stepper.move(PISTON_STEP_PER_REV * 0.44);
         stepper.runToPosition();
     }
+private:
+    AccelStepper stepper;
+};
+
+class FireControl
+{
+public:
+    FireControl(int interface, int pul, int dir, int perRev, int maxSpeed, int acceleration)
+    {
+        stepper = AccelStepper(interface, pul, dir);
+        stepper.setMaxSpeed(maxSpeed);
+        stepper.setAcceleration(acceleration);
+    }
+
+    void fire()
+    {
+        stepper.move(-FIRING_STEP_PER_REV * 0.5);
+        stepper.runToPosition();
+        stepper.move(FIRING_STEP_PER_REV * 0.55);
+        stepper.runToPosition();
+    }
+
 private:
     AccelStepper stepper;
 };
@@ -218,6 +223,7 @@ Chassis chassis(
     CHASSIS_RIGHT_DC_MAX_SPEED, 
     CHASSIS_RIGHT_DC_INVERTED
 );
+FireControl fireControl(FIRING_STEP_INTERFACE, FIRING_STEP_PUL, FIRING_STEP_DIR, FIRING_STEP_PER_REV, FIRING_STEP_MAX_SPEED, FIRING_STEP_ACCELERATION);
 
 // check whether x is between min and max (inclusive)
 // Precondition: x is the value to check, min and max are the bounds
@@ -238,16 +244,9 @@ void setup()
 
     yawStep.setMaxSpeed(1000);
     yawStep.setAcceleration(500);
-    firingStep.setMaxSpeed(4000);
-    firingStep.setAcceleration(4000);
     genevaStep.setMaxSpeed(1000);
     genevaStep.setAcceleration(500);
     Serial.write("Stepper motor initialized\n");
-
-    rightServo.attach(RIGHT_SERVO_PIN);
-    leftServo.attach(LEFT_SERVO_PIN);
-    rightServo.write(RIGHT_SERVO_CENTER);
-    leftServo.write(LEFT_SERVO_CENTER);
     Serial.write("Servo initialized\n");
 }
 
@@ -324,60 +323,30 @@ void loop()
         Serial.print("done");
     }
 
-    // servo commands
-    if(input == "rise" && 
-       between(rightServo.read() + 
-               RIGHT_SERVO_INCREMENT, 
-               RIGHT_SERVO_MIN, RIGHT_SERVO_MAX) && 
-       between(leftServo.read() + 
-               LEFT_SERVO_INCREMENT, 
-               LEFT_SERVO_MIN, LEFT_SERVO_MAX))
-    {
-        rightServo.write(rightServo.read() + RIGHT_SERVO_INCREMENT);
-        leftServo.write(leftServo.read() + LEFT_SERVO_INCREMENT);
-        Serial.println("servo raised");
-    }
+    // if(input == "fire" && remainingAmmo > 0)
+    // {
+    //     remainingAmmo--;
 
-    if(input == "lower" && 
-       between(rightServo.read() - 
-               RIGHT_SERVO_INCREMENT, 
-               RIGHT_SERVO_MIN, RIGHT_SERVO_MAX) && 
-       between(leftServo.read() - 
-               LEFT_SERVO_INCREMENT, 
-               LEFT_SERVO_MIN, LEFT_SERVO_MAX))
-    {
-        rightServo.write(rightServo.read() - RIGHT_SERVO_INCREMENT);
-        leftServo.write(leftServo.read() - LEFT_SERVO_INCREMENT);
-        Serial.println("servo lowered");
-    }
+    //     // piston forward
+    //     piston.moveForward();
+    //     // fire
+    //     fireControl.fire();
+    //     // piston back
+    //     piston.moveBackward();
 
-    if(input == "fire" && remainingAmmo > 0)
-    {
-        remainingAmmo--;
+    //     if(remainingAmmo != 0)
+    //     {
+    //         // reload
+    //         genevaStep.move(GENEVA_STEP_PER_REV * 2.4);
+    //         genevaStep.runToPosition();
+    //     }
 
-        // piston forward
-        piston.moveForward();
-        // fire
-        firingStep.move(FIRING_STEP_PER_REV * 0.5);
-        firingStep.runToPosition();
-        firingStep.move(-FIRING_STEP_PER_REV * 0.55);
-        firingStep.runToPosition();
-        // piston back
-        piston.moveBackward();
-
-        if(remainingAmmo != 0)
-        {
-            // reload
-            genevaStep.move(GENEVA_STEP_PER_REV * 2.4);
-            genevaStep.runToPosition();
-        }
-
-        Serial.println("fired");
-    }
-    else if(input == "fire" && remainingAmmo == 0)
-    {
-        Serial.println("out of ammo");
-    }
+    //     Serial.println("fired");
+    // }
+    // else if(input == "fire" && remainingAmmo == 0)
+    // {
+    //     Serial.println("out of ammo");
+    // }
 
     if(input == "reset" && remainingAmmo < 3)
     {
@@ -414,14 +383,17 @@ void loop()
         Serial.println("piston test done");
     }
 
-    if(input == "valve test")
+    if(input == "piston backward")
+    {
+        piston.moveBackward();
+        Serial.println("piston moved backward");
+    }
+
+    if(input == "fire")
     {
         // fire
-        firingStep.move(FIRING_STEP_PER_REV * 0.5);
-        firingStep.runToPosition();
-        firingStep.move(-FIRING_STEP_PER_REV * 0.55);
-        firingStep.runToPosition();
-        Serial.println("valve test done");
+        fireControl.fire();
+        Serial.println("fired");
     }
 
     if(input == "move forward")         chassis.moveForward();
