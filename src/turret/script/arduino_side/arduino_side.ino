@@ -389,11 +389,34 @@ void loop()
         Serial.println("piston moved backward");
     }
 
-    if(input == "fire")
+    // if(input == "fire")
+    // {
+    //     // fire
+    //     fireControl.fire();
+    //     Serial.println("fired");
+    // }
+
+    if(input == "fire" && remainingAmmo > 0)
     {
-        // fire
-        fireControl.fire();
+        remainingAmmo--;
+
+        // piston forward
+        piston.moveForward();
+        // piston back
+        piston.moveBackward();
+
+        if(remainingAmmo != 0)
+        {
+            // reload
+            genevaStep.move(GENEVA_STEP_PER_REV * 2.4);
+            genevaStep.runToPosition();
+        }
+
         Serial.println("fired");
+    }
+    else if(input == "fire" && remainingAmmo == 0)
+    {
+        Serial.println("out of ammo");
     }
 
     if(input == "move forward")         chassis.moveForward();
