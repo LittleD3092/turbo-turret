@@ -12,7 +12,7 @@ USE_TURRET = True
 
 class ControllerInputClient(Node):
     def __init__(self):
-        super().__init__('main_control')
+        super().__init__('main_controller_input_client')
         self.cli = self.create_client(Controller, 'controller_input')
         while not self.cli.wait_for_service(timeout_sec=5.0):
             self.get_logger().info('controller service not available, waiting again...')
@@ -50,7 +50,7 @@ class ControllerInputClient(Node):
     
 class TurretClient(Node):
     def __init__(self):
-        super().__init__('main_control')
+        super().__init__('main_turret_client')
         self.cli = self.create_client(Turret, 'turret')
         while not self.cli.wait_for_service(timeout_sec=5.0):
             self.get_logger().info('turret service not available, waiting again...')
@@ -66,7 +66,7 @@ class TurretClient(Node):
 
 class TargetRecognizeClient(Node):
     def __init__(self):
-        super().__init__('main_control')
+        super().__init__('main_target_recognize_client')
         self.cli = self.create_client(TargetRecognize, 'target_recognize')
         while not self.cli.wait_for_service(timeout_sec=5.0):
             self.get_logger().info('target recognize service not available, waiting again...')
